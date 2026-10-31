@@ -1,0 +1,3 @@
+# Always use upstream default detection rules, regardless of the caller's config.
+[extend]
+useDefault = true

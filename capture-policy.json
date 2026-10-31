@@ -13,5 +13,12 @@
     ".config/powershell/Microsoft.PowerShell_profile.ps1"
   ],
   "directories": [".config/nvim", ".config/utils"],
-  "max_file_bytes": 1048576
+  "max_file_bytes": 1048576,
+  "excludes": [".DS_Store", "*/.DS_Store", "*.bak", "*.swp", "*.swo"],
+  "exclude_components": [
+    ".ssh", ".aws", ".gnupg", ".codex", ".agents", ".claude", "node_modules",
+    ".env", ".env.*", "*.pem", "*.key", "*private*", "*secret*", "*token*",
+    "*credentials*", "*auth*", "*history*", "*cache*", "*session*", "*buffers*",
+    "*backup*", "*.local", "*.local.*"
+  ]
 }

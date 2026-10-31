@@ -5,7 +5,8 @@ configuration; it does not install settings or execute captured files.
 
 ## Capture a machine
 
-Requires Python 3.8+ on macOS or Linux (including WSL, Linux NAS devices, and Raspberry Pi).
+Start with `zsh dotfiles.zsh doctor`. The zsh launcher checks for Python 3.8+ on macOS or Linux
+(including WSL, Linux NAS devices, and Raspberry Pi); it does not assume Python is installed.
 No third-party Python packages, root access, Git, zsh, or network are needed for capture.
 Copy this directory to a machine if a Git remote is not yet available. On a NAS without Python,
 install Python through its supported package system first; appliance compatibility is not assumed.
@@ -13,10 +14,10 @@ install Python through its supported package system first; appliance compatibili
 From this repository:
 
 ```sh
-python3 scripts/capture.py --label mac
-python3 scripts/capture.py --label nas
-python3 scripts/capture.py --label work-wsl
-python3 scripts/capture.py --label pi
+zsh dotfiles.zsh capture --label mac --family mac
+zsh dotfiles.zsh capture --label nas --family nas
+zsh dotfiles.zsh capture --label work-wsl --family wsl
+zsh dotfiles.zsh capture --label pi --family pi
 ```
 
 Run only the command for that machine. Each run prints a new `.private/<label>-<timestamp>` directory.
@@ -40,13 +41,14 @@ scoped collection decision. The initial collector targets user configuration, no
 
 Add specific paths to `capture-policy.json` after reviewing their purpose, or pass `--policy` with
 a private JSON policy of the same shape. Directory entries recurse, so prefer individual file paths.
+Global rules are overlaid by the explicit family and optional local policy.
 Name exclusions are a guardrail, not a secret scanner. Do not use this against a hostile filesystem.
 
 ## Compare captures
 
 ```sh
-python3 scripts/capture.py --label legacy-mac --source-kind legacy --root ../dotfiles-mac/src
-python3 scripts/compare.py .private/<old>/manifest.json .private/<new>/manifest.json
+zsh dotfiles.zsh capture --label legacy-mac --family mac --source-kind legacy --root ../dotfiles-mac/src
+zsh dotfiles.zsh compare .private/<old>/manifest.json .private/<new>/manifest.json
 ```
 
 Comparison reports exact content and mode equality, one-sided files, and unresolved cases. Its output
@@ -54,7 +56,10 @@ contains paths that may be private; review before saving it under `evidence/`. K
 between trusted machines private. For work WSL, review on the work machine and share only approved
 generic findings; retain private work files there.
 
-The committed `evidence/` directory contains reviewed summaries, not raw home-directory copies.
+The committed `evidence/` directory contains reviewed summaries and can receive sanitized file
+snapshots through the gated export workflow. It never receives raw home-directory copies.
+See [capture, sanitize, review, commit](docs/capture-workflow.md) for family policies, private
+replacement maps, required secret scanning, and per-machine Git commits.
 Promote a sanitized, reusable configuration file into managed source only after classifying it as
 shared, platform, role, or host-specific. Never infer that the newest version is the best version.
 
@@ -74,4 +79,6 @@ python3 -m unittest discover -s tests -v
 ```
 
 Tests cover copying integrity, exclusion boundaries, traversal, symlinks, FIFO avoidance, size/text
-limits, output permissions, repeat capture protection, and unknown-versus-missing comparisons.
+limits, output permissions, repeat capture protection, unknown-versus-missing comparisons, policy
+layering, missing prerequisites, literal scrubbing, residual secrets, and exact-review export gates.
+The real-scanner integration test runs when Gitleaks is on PATH; otherwise it is explicitly skipped.

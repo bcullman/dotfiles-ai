@@ -10,14 +10,9 @@ import re
 import stat
 import sys
 from datetime import datetime, timezone
+from policy import FAMILIES, excluded, load_policy
 
 REPO = Path(__file__).resolve().parents[1]
-BLOCKED = re.compile(
-    r"(^|[._-])(private|local|secret|secrets|token|tokens|credentials|auth|"
-    r"history|cache|sessions?|buffers|backups?)([._-]|$)", re.I
-)
-BLOCKED_PARTS = {".git", ".ssh", ".aws", ".gnupg", ".codex", ".agents",
-                 ".claude", "node_modules", ".env"}
 
 
 def relative_path(value):
@@ -25,12 +20,6 @@ def relative_path(value):
     if not value or path.is_absolute() or ".." in path.parts or str(path) == ".":
         raise ValueError("Policy paths must be nonempty relative paths without '..'")
     return path
-
-
-def blocked(path):
-    return any(part in BLOCKED_PARTS or BLOCKED.search(part)
-               or part.startswith('.env.') or part.endswith(('.pem', '.key'))
-               for part in path.parts)
 
 
 def linked(root, relative):
@@ -73,7 +62,7 @@ def capture(root, output, label, policy, source_kind):
         raise ValueError("max_file_bytes must be positive")
     rows = []
     for relative in directories:
-        if blocked(relative) or linked(root, relative):
+        if excluded(relative, policy) or linked(root, relative):
             rows.append({"path": relative.as_posix(), "status": "excluded-directory"})
             continue
         directory = root / relative
@@ -89,7 +78,7 @@ def capture(root, output, label, policy, source_kind):
         for base, dirs, files in os.walk(str(directory), followlinks=False, onerror=walk_error):
             for name in list(dirs):
                 rel = (Path(base) / name).relative_to(root)
-                if blocked(rel) or linked(root, rel):
+                if excluded(rel, policy) or linked(root, rel):
                     dirs.remove(name)
                     rows.append({"path": rel.as_posix(), "status": "excluded-directory"})
             paths.update((Path(base) / name).relative_to(root) for name in files)
@@ -98,7 +87,7 @@ def capture(root, output, label, policy, source_kind):
     for relative in sorted(paths):
         row = {"path": relative.as_posix()}
         data = None
-        if blocked(relative):
+        if excluded(relative, policy):
             row["status"] = "excluded-name"
         elif linked(root, relative):
             row["status"] = "symlink-not-followed"
@@ -147,6 +136,8 @@ def main():
     parser.add_argument("--root", type=Path, default=Path.home(), help="Home or legacy src directory")
     parser.add_argument("--source-kind", choices=["machine", "legacy"], default="machine")
     parser.add_argument("--policy", type=Path, default=REPO / "capture-policy.json")
+    parser.add_argument("--family", choices=FAMILIES, required=True)
+    parser.add_argument("--local-policy", type=Path, help="Private additive/removal overlay")
     args = parser.parse_args()
     if not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,39}", args.label):
         parser.error("Use a lowercase alias containing only letters, digits, and hyphens")
@@ -159,7 +150,7 @@ def main():
     output = private / (args.label + "-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ"))
     try:
         result = capture(args.root, output, args.label,
-                         json.loads(args.policy.read_text()), args.source_kind)
+                         load_policy(args.policy, args.family, args.local_policy), args.source_kind)
     except (OSError, ValueError, KeyError) as error:
         print("Capture failed ({}); inspect private output locally.".format(type(error).__name__), file=sys.stderr)
         return 1

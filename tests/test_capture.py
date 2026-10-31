@@ -5,6 +5,9 @@ from pathlib import Path
 import stat
 import tempfile
 import unittest
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 
 def module(name):
@@ -37,7 +40,8 @@ class CaptureTests(unittest.TestCase):
             (directory / "linkdir").symlink_to(home, target_is_directory=True)
             os.mkfifo(str(directory / "pipe"))
             policy = {"files": [".zshrc", ".env", ".zprofile", ".bashrc"],
-                      "directories": [".config/nvim"], "max_file_bytes": 100}
+                      "directories": [".config/nvim"], "max_file_bytes": 100,
+                      "exclude_components": [".env", "secrets.*"]}
             output = base / "capture"
             result = capture.capture(home, output, "test", policy, "machine")
             rows = {r["path"]: r["status"] for r in result["files"]}
