@@ -1,0 +1,17 @@
+{
+  "files": [
+    ".profile", ".bash_profile", ".bashrc", ".bash_logout",
+    ".zshenv", ".zprofile", ".zshrc", ".zsh_logout",
+    ".gitconfig", ".gitignore_global", ".inputrc", ".nanorc",
+    ".vimrc", ".tmux.conf", ".editorconfig",
+    ".config/.shell_alias", ".config/.shell_exports",
+    ".config/.shell_completers", ".config/.shell_completers_openclaw",
+    ".config/.shell_utils", ".config/starship.toml",
+    ".config/micro/settings.json", ".config/micro/bindings.json",
+    ".config/fish/config.fish", ".config/kitty/kitty.conf",
+    ".config/htop/htoprc", ".config/btop/btop.conf",
+    ".config/powershell/Microsoft.PowerShell_profile.ps1"
+  ],
+  "directories": [".config/nvim", ".config/utils"],
+  "max_file_bytes": 1048576
+}
