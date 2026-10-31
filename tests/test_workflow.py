@@ -26,14 +26,13 @@ class WorkflowTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             (root / "policies").mkdir()
-            (root / "base.json").write_text(json.dumps({"files": [".zshrc", ".vimrc"],
-                "directories": [".config/nvim"], "excludes": ["*.bak"], "max_file_bytes": 100}))
-            (root / "policies/linux.json").write_text(json.dumps({"files": [".profile"]}))
-            (root / "policies/wsl.json").write_text(json.dumps({"files": [".wslrc"]}))
-            (root / "local.json").write_text(json.dumps({"remove_files": [".vimrc"], "excludes": [".config/nvim/work"]}))
+            (root / "base.json").write_text(json.dumps({"patterns": [".zshrc", ".vimrc", ".config/nvim"], "excludes": ["*.bak"], "max_file_bytes": 100}))
+            (root / "policies/linux.json").write_text(json.dumps({"patterns": [".profile"]}))
+            (root / "policies/wsl.json").write_text(json.dumps({"patterns": [".wslrc"]}))
+            (root / "local.json").write_text(json.dumps({"remove_patterns": [".vimrc", ".config/nvim"], "excludes": [".config/nvim/work"]}))
             with patch.object(policy, "REPO", root):
                 result = policy.load_policy(root / "base.json", "wsl", root / "local.json")
-            self.assertEqual(result["files"], [".profile", ".wslrc", ".zshrc"])
+            self.assertEqual(result["patterns"], [".profile", ".wslrc", ".zshrc"])
             self.assertTrue(policy.excluded(Path(".config/nvim/work/settings.lua"), result))
             self.assertTrue(policy.excluded(Path(".zshrc.bak"), result))
             (root / "local.json").write_text(json.dumps({"remove_excludes": ["*.bak"]}))
@@ -46,7 +45,7 @@ class WorkflowTests(unittest.TestCase):
         home.mkdir()
         (home / ".zshrc").write_text(text)
         snapshot = root / "raw"
-        capture.capture(home, snapshot, "test", {"files": [".zshrc"], "directories": [],
+        capture.capture(home, snapshot, "test", {"patterns": [".zshrc"],
             "max_file_bytes": 10000, "family": "linux"}, "machine")
         rules = {"files": [{"source": ".zshrc", "target": ".zshrc"}],
                  "replacements": [{"value": "/home/example", "placeholder": "__HOME__", "files": ["*"]}]}

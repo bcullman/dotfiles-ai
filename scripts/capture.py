@@ -53,7 +53,7 @@ def read_file(path, limit):
     return data, "captured", stat.S_IMODE(mode)
 
 
-def expand_files(root, entries, policy):
+def expand_patterns(root, entries, policy):
     paths, patterns = set(), []
     for entry in entries:
         relative = relative_path(entry)
@@ -61,7 +61,7 @@ def expand_files(root, entries, policy):
             paths.add(relative)
             continue
         if "**" in entry:
-            raise ValueError("Recursive '**' is unsupported; use directories for recursive capture")
+            raise ValueError("Recursive '**' is unsupported; select a directory for recursive capture")
         candidates = {Path(".")}
         incomplete = False
         for part in relative.parts:
@@ -94,23 +94,18 @@ def capture(root, output, label, policy, source_kind):
     root = root.resolve(strict=True)
     if not root.is_dir():
         raise ValueError("Source root must be a directory")
-    paths, patterns = expand_files(root, policy["files"], policy)
-    directories = [relative_path(p) for p in policy["directories"]]
+    if "files" in policy or "directories" in policy:
+        raise ValueError("Combine capture files and directories into patterns")
+    selected, patterns = expand_patterns(root, policy["patterns"], policy)
+    directories = {p for p in selected if not excluded(p, policy)
+                   and not linked(root, p) and (root / p).is_dir()}
+    paths = selected - directories
     limit = policy["max_file_bytes"]
     if not isinstance(limit, int) or limit < 1:
         raise ValueError("max_file_bytes must be positive")
     rows = []
-    for relative in directories:
-        if excluded(relative, policy) or linked(root, relative):
-            rows.append({"path": relative.as_posix(), "status": "excluded-directory"})
-            continue
+    for relative in sorted(directories):
         directory = root / relative
-        if not directory.exists():
-            rows.append({"path": relative.as_posix(), "status": "missing-directory"})
-            continue
-        if not directory.is_dir():
-            rows.append({"path": relative.as_posix(), "status": "not-directory"})
-            continue
         def walk_error(error):
             rows.append({"path": Path(error.filename).relative_to(root).as_posix(),
                          "status": "unreadable-directory"})
@@ -119,7 +114,7 @@ def capture(root, output, label, policy, source_kind):
                 rel = (Path(base) / name).relative_to(root)
                 if excluded(rel, policy) or linked(root, rel):
                     dirs.remove(name)
-                    rows.append({"path": rel.as_posix(), "status": "excluded-directory"})
+                    paths.add(rel)
             paths.update((Path(base) / name).relative_to(root) for name in files)
     output.mkdir(mode=0o700, parents=True, exist_ok=False)
     os.chmod(str(output), 0o700)

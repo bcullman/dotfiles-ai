@@ -46,19 +46,19 @@ Precedence:
 2. `policies/linux.json` for Linux-derived families, then `policies/<family>.json`.
 3. Optional private overlay passed with `--local-policy .private/capture.local.json`.
 
-Each overlay may add `files`, `directories`, `excludes`, and `exclude_components`. Corresponding
-`remove_files`, `remove_directories`, `remove_excludes`, and `remove_exclude_components` lists remove
+Each overlay may add `patterns`, `excludes`, and `exclude_components`. Corresponding
+`remove_patterns`, `remove_excludes`, and `remove_exclude_components` lists remove
 exact entries inherited from earlier layers. Removals happen before additions in that layer.
 An included file still loses to an exclusion: remove the exclusion explicitly if it is intentional.
 
-`files` entries accept case-sensitive wildcards: `*`, `?`, and character classes such as `[ab]`.
+`patterns` entries select files or directories and accept case-sensitive wildcards: `*`, `?`, and character classes such as `[ab]`.
 For example, `.config/.shell_*` captures the matching shell files without listing each one.
 Patterns match one path component at a time (`*` does not cross `/`) and include dotfiles.
 Overlapping entries are deduplicated. Exclusions still apply, and expansion never traverses an
 excluded or symlinked directory. Unmatched/incomplete patterns are recorded under `patterns` in the
-private manifest; literal missing files retain their existing `missing` status. Matched directories
-are not recursively captured through `files`. Use literal `directories` entries for recursion;
-recursive `**` file patterns are rejected. Overlay removal lists remove the exact pattern entry,
+private manifest; missing literal paths are recorded as `missing`. Matched files are copied;
+matched directories are recursively captured, including when selected by a wildcard. Exclusions
+prune that recursion. Recursive `**` patterns are unnecessary and remain unsupported. Overlay removal lists remove the exact pattern entry,
 not its expanded matches; use `excludes` to omit one file from a wildcard selection.
 
 `excludes` uses case-sensitive relative-path glob matches, including ancestor paths. Python glob
@@ -71,11 +71,15 @@ Example private overlay:
 
 ```json
 {
-  "files": [".config/example/settings.json"],
-  "remove_directories": [".config/nvim"],
+  "patterns": [".config/example/settings.json", ".config/utils"],
+  "remove_patterns": [".config/nvim"],
   "excludes": [".config/utils/work-only.sh"]
 }
 ```
+
+Existing local capture policies must combine their old `files` and `directories` lists into
+`patterns`, and replace their removal lists with `remove_patterns`. Old capture manifests remain
+readable by comparison/export; export maps still use `files` for explicit source/target mappings.
 
 The complete resolved policy is embedded in the private capture manifest for reproducibility.
 Filename inventory stays private too. Do not commit machine-local policy paths or work details.

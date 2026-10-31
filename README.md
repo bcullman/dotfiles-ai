@@ -40,7 +40,8 @@ ZDOTDIR, system configuration, macOS preferences, and installed package inventor
 scoped collection decision. The initial collector targets user configuration, not a machine backup.
 
 Add specific paths to `capture-policy.json` after reviewing their purpose, or pass `--policy` with
-a private JSON policy of the same shape. Directory entries recurse, so prefer individual file paths.
+a private JSON policy of the same shape. Use the unified `patterns` list for files, wildcards, and directories. Matched directories recurse,
+so use narrower patterns when only selected files are needed.
 Global rules are overlaid by the explicit family and optional local policy.
 Name exclusions are a guardrail, not a secret scanner. Do not use this against a hostile filesystem.
 

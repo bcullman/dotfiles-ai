@@ -9,6 +9,8 @@ FAMILIES = ("mac", "linux", "wsl", "nas", "pi")
 
 def load_policy(base, family=None, local=None):
     policy = json.loads(Path(base).read_text())
+    if "files" in policy or "directories" in policy:
+        raise ValueError("Combine capture files and directories into patterns")
     policy.setdefault("excludes", [])
     policy.setdefault("exclude_components", [])
     layers = []
@@ -22,7 +24,7 @@ def load_policy(base, family=None, local=None):
         layers.append(Path(local))
     for path in layers:
         overlay = json.loads(path.read_text())
-        keys = ("files", "directories", "excludes", "exclude_components")
+        keys = ("patterns", "excludes", "exclude_components")
         if set(overlay) - (set(keys) | {"remove_" + key for key in keys}):
             raise ValueError("Unknown policy overlay key")
         if any(not isinstance(v, list) or not all(isinstance(p, str) and p for p in v)

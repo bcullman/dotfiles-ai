@@ -22,6 +22,27 @@ compare = module("compare")
 
 
 class CaptureTests(unittest.TestCase):
+    def test_mixed_patterns_recurse_into_directories_and_deduplicate(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "home"
+            config = root / ".config"
+            (config / "app/nested").mkdir(parents=True)
+            (config / "app/nested/settings.json").write_text("{}")
+            (config / "app/private").mkdir()
+            (config / "app/private/secret").write_text("not captured")
+            (config / "app/link").symlink_to(config / "app/nested", target_is_directory=True)
+            (config / "plain.conf").write_text("fixture")
+            result = capture.capture(root, Path(temp) / "out", "test", {
+                "patterns": [".config/*", ".config/app", ".config/app/nested/settings.json", ".missing"],
+                "exclude_components": ["private"], "max_file_bytes": 100
+            }, "machine")
+            rows = {r["path"]: r["status"] for r in result["files"]}
+            self.assertEqual(rows, {
+                ".config/app/nested/settings.json": "captured", ".config/plain.conf": "captured",
+                ".config/app/private": "excluded-name", ".config/app/link": "symlink-not-followed",
+                ".missing": "missing"})
+            self.assertEqual(len(rows), len(result["files"]))
+
     def test_file_wildcards_deduplicate_and_respect_exclusions(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp) / "home"
@@ -30,9 +51,9 @@ class CaptureTests(unittest.TestCase):
             for name in [".shell_alias", ".shell_exports", ".shell_private", "other"]:
                 (config / name).write_text("fixture\n")
             result = capture.capture(root, Path(temp) / "out", "test", {
-                "files": [".config/.shell_*", ".config/.shell_alias", ".config/.shell_[ae]*",
+                "patterns": [".config/.shell_*", ".config/.shell_alias", ".config/.shell_[ae]*",
                           ".config/.shell_export?", ".config/absent*", ".missing"],
-                "directories": [], "exclude_components": ["*private*"], "max_file_bytes": 100
+                "exclude_components": ["*private*"], "max_file_bytes": 100
             }, "machine")
             rows = {r["path"]: r["status"] for r in result["files"]}
             self.assertEqual(rows, {".config/.shell_alias": "captured",
@@ -51,7 +72,7 @@ class CaptureTests(unittest.TestCase):
                 (config / name / "settings.conf").write_text("fixture")
             (config / "link").symlink_to(config / "safe", target_is_directory=True)
             result = capture.capture(root, Path(temp) / "out", "test", {
-                "files": [".config/*/*.conf"], "directories": [],
+                "patterns": [".config/*/*.conf"],
                 "exclude_components": ["private"], "max_file_bytes": 100
             }, "machine")
             self.assertEqual({r["path"]: r["status"] for r in result["files"]}, {
@@ -59,9 +80,9 @@ class CaptureTests(unittest.TestCase):
                 ".config/link": "symlink-not-followed"})
             self.assertEqual(result["patterns"][0]["status"], "incomplete")
             with self.assertRaises(ValueError):
-                capture.expand_files(root, [".config/**/*.conf"], {})
+                capture.expand_patterns(root, [".config/**/*.conf"], {})
             with self.assertRaises(ValueError):
-                capture.expand_files(root, ["../*.conf"], {})
+                capture.expand_patterns(root, ["../*.conf"], {})
 
     def test_capture_boundaries_and_integrity(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -80,8 +101,7 @@ class CaptureTests(unittest.TestCase):
             (directory / "large").write_text("x" * 101)
             (directory / "linkdir").symlink_to(home, target_is_directory=True)
             os.mkfifo(str(directory / "pipe"))
-            policy = {"files": [".zshrc", ".env", ".zprofile", ".bashrc"],
-                      "directories": [".config/nvim"], "max_file_bytes": 100,
+            policy = {"patterns": [".zshrc", ".env", ".zprofile", ".bashrc", ".config/nvim"], "max_file_bytes": 100,
                       "exclude_components": [".env", "secrets.*"]}
             output = base / "capture"
             result = capture.capture(home, output, "test", policy, "machine")
@@ -93,7 +113,7 @@ class CaptureTests(unittest.TestCase):
             self.assertEqual(rows[".config/nvim/binary"], "non-text")
             self.assertEqual(rows[".config/nvim/large"], "too-large")
             self.assertEqual(rows[".config/nvim/pipe"], "not-regular-file")
-            self.assertEqual(rows[".config/nvim/linkdir"], "excluded-directory")
+            self.assertEqual(rows[".config/nvim/linkdir"], "symlink-not-followed")
             self.assertEqual((output / "files/.zshrc").read_bytes(), (home / ".zshrc").read_bytes())
             self.assertEqual(stat.S_IMODE(output.stat().st_mode), 0o700)
             self.assertEqual(stat.S_IMODE((output / "files/.zshrc").stat().st_mode), 0o600)
@@ -110,7 +130,7 @@ class CaptureTests(unittest.TestCase):
             (outside / "config").write_text("private")
             (root / ".config").symlink_to(outside, target_is_directory=True)
             result = capture.capture(root, Path(temp) / "out", "test",
-                                     {"files": [".config/config"], "directories": [], "max_file_bytes": 100}, "machine")
+                                     {"patterns": [".config/config"], "max_file_bytes": 100}, "machine")
             self.assertEqual(result["files"][0]["status"], "symlink-not-followed")
             for value in ["../secret", "/etc/passwd", ".", ""]:
                 with self.assertRaises(ValueError):
