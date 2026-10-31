@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Read-only, allowlisted dotfile capture. Output is private, never auto-staged."""
 import argparse
+import fnmatch
+import glob
 import hashlib
 import json
 import os
@@ -51,11 +53,48 @@ def read_file(path, limit):
     return data, "captured", stat.S_IMODE(mode)
 
 
+def expand_files(root, entries, policy):
+    paths, patterns = set(), []
+    for entry in entries:
+        relative = relative_path(entry)
+        if not glob.has_magic(entry):
+            paths.add(relative)
+            continue
+        if "**" in entry:
+            raise ValueError("Recursive '**' is unsupported; use directories for recursive capture")
+        candidates = {Path(".")}
+        incomplete = False
+        for part in relative.parts:
+            matches = set()
+            for parent in candidates:
+                if excluded(parent, policy) or linked(root, parent):
+                    paths.add(parent)  # Record why traversal stopped without reading its contents.
+                    incomplete = True
+                    continue
+                try:
+                    if glob.has_magic(part):
+                        matches.update(parent / child.name for child in (root / parent).iterdir()
+                                       if fnmatch.fnmatchcase(child.name, part))
+                    else:
+                        child = root / parent / part
+                        if child.exists() or child.is_symlink():
+                            matches.add(parent / part)
+                except (FileNotFoundError, NotADirectoryError):
+                    continue
+                except OSError:
+                    incomplete = True
+            candidates = matches
+        paths.update(candidates)
+        patterns.append({"pattern": entry, "matches": sorted(p.as_posix() for p in candidates),
+                         "status": "incomplete" if incomplete else "matched" if candidates else "no-matches"})
+    return paths, patterns
+
+
 def capture(root, output, label, policy, source_kind):
     root = root.resolve(strict=True)
     if not root.is_dir():
         raise ValueError("Source root must be a directory")
-    paths = {relative_path(p) for p in policy["files"]}
+    paths, patterns = expand_files(root, policy["files"], policy)
     directories = [relative_path(p) for p in policy["directories"]]
     limit = policy["max_file_bytes"]
     if not isinstance(limit, int) or limit < 1:
@@ -121,7 +160,7 @@ def capture(root, output, label, policy, source_kind):
         "captured_at": datetime.now(timezone.utc).isoformat(),
         "collector_platform": platform.system(), "collector_arch": platform.machine(),
         "collector_wsl": "microsoft" in platform.release().lower(),
-        "policy": policy, "inventory_names_only": inventory,
+        "policy": policy, "inventory_names_only": inventory, "patterns": patterns,
         "files": sorted(rows, key=lambda row: row["path"]),
     }
     target = output / "manifest.json"

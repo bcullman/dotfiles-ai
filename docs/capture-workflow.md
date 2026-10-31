@@ -51,6 +51,16 @@ Each overlay may add `files`, `directories`, `excludes`, and `exclude_components
 exact entries inherited from earlier layers. Removals happen before additions in that layer.
 An included file still loses to an exclusion: remove the exclusion explicitly if it is intentional.
 
+`files` entries accept case-sensitive wildcards: `*`, `?`, and character classes such as `[ab]`.
+For example, `.config/.shell_*` captures the matching shell files without listing each one.
+Patterns match one path component at a time (`*` does not cross `/`) and include dotfiles.
+Overlapping entries are deduplicated. Exclusions still apply, and expansion never traverses an
+excluded or symlinked directory. Unmatched/incomplete patterns are recorded under `patterns` in the
+private manifest; literal missing files retain their existing `missing` status. Matched directories
+are not recursively captured through `files`. Use literal `directories` entries for recursion;
+recursive `**` file patterns are rejected. Overlay removal lists remove the exact pattern entry,
+not its expanded matches; use `excludes` to omit one file from a wildcard selection.
+
 `excludes` uses case-sensitive relative-path glob matches, including ancestor paths. Python glob
 matching here allows `*` to span slashes. `exclude_components` matches individual path components,
 case-insensitively, so a private directory is pruned at any depth. Default component patterns are

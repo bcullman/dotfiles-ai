@@ -22,6 +22,47 @@ compare = module("compare")
 
 
 class CaptureTests(unittest.TestCase):
+    def test_file_wildcards_deduplicate_and_respect_exclusions(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "home"
+            config = root / ".config"
+            config.mkdir(parents=True)
+            for name in [".shell_alias", ".shell_exports", ".shell_private", "other"]:
+                (config / name).write_text("fixture\n")
+            result = capture.capture(root, Path(temp) / "out", "test", {
+                "files": [".config/.shell_*", ".config/.shell_alias", ".config/.shell_[ae]*",
+                          ".config/.shell_export?", ".config/absent*", ".missing"],
+                "directories": [], "exclude_components": ["*private*"], "max_file_bytes": 100
+            }, "machine")
+            rows = {r["path"]: r["status"] for r in result["files"]}
+            self.assertEqual(rows, {".config/.shell_alias": "captured",
+                                   ".config/.shell_exports": "captured",
+                                   ".config/.shell_private": "excluded-name", ".missing": "missing"})
+            self.assertEqual(len(rows), len(result["files"]))
+            self.assertEqual(result["patterns"][-1]["status"], "no-matches")
+            self.assertEqual(result["patterns"][2]["matches"], [".config/.shell_exports"])
+
+    def test_wildcards_do_not_traverse_links_or_excluded_directories(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp) / "home"
+            config = root / ".config"
+            for name in ["safe", "private"]:
+                (config / name).mkdir(parents=True)
+                (config / name / "settings.conf").write_text("fixture")
+            (config / "link").symlink_to(config / "safe", target_is_directory=True)
+            result = capture.capture(root, Path(temp) / "out", "test", {
+                "files": [".config/*/*.conf"], "directories": [],
+                "exclude_components": ["private"], "max_file_bytes": 100
+            }, "machine")
+            self.assertEqual({r["path"]: r["status"] for r in result["files"]}, {
+                ".config/safe/settings.conf": "captured", ".config/private": "excluded-name",
+                ".config/link": "symlink-not-followed"})
+            self.assertEqual(result["patterns"][0]["status"], "incomplete")
+            with self.assertRaises(ValueError):
+                capture.expand_files(root, [".config/**/*.conf"], {})
+            with self.assertRaises(ValueError):
+                capture.expand_files(root, ["../*.conf"], {})
+
     def test_capture_boundaries_and_integrity(self):
         with tempfile.TemporaryDirectory() as temp:
             base = Path(temp)
