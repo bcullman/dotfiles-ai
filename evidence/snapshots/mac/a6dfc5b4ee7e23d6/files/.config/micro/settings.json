@@ -1,0 +1,13 @@
+{
+    "autosu": true,
+    "basename": true,
+    "colorcolumn": 80,
+    "colorscheme": "dukedark-tc",
+    "diffgutter": true,
+    "hltrailingws": true,
+    "keymenu": true,
+    "mkparents": true,
+    "rmtrailingws": true,
+    "savecursor": true,
+    "scrollbar": true
+}

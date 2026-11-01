@@ -95,6 +95,21 @@ class WorkflowTests(unittest.TestCase):
                 with self.assertRaises(export.ExportError):
                     export.scan(root, root)
 
+    def test_literal_password_gate_catches_non_provider_credentials(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            candidate = root / "candidate"
+            candidate.mkdir()
+            target = candidate / ".shell_exports"
+            for value in ["'example!With$Punctuation'", '"ordinarywords"', 'unquoted-example']:
+                target.write_text("export SERVICE_PASSWORD=" + value + "\n")
+                with self.assertRaisesRegex(export.ExportError, "credential assignment"):
+                    export.scan(candidate, root)
+            target.write_text('export SERVICE_PASSWORD="__SERVICE_PASSWORD__"\nexport TOKEN="$TOKEN"\n')
+            with patch.object(export.shutil, "which", return_value=None):
+                with self.assertRaisesRegex(export.ExportError, "Gitleaks is required"):
+                    export.scan(candidate, root)
+
     def test_publish_requires_exact_review_and_rescan(self):
         with tempfile.TemporaryDirectory() as temp:
             repo = Path(temp)

@@ -128,7 +128,11 @@ zsh dotfiles.zsh export --capture .private/<capture-id> --rules .private/export.
 ```
 
 The command verifies captured file hashes, sanitizes selected files into a new private candidate,
-checks for remaining known values, then scans the whole candidate with Gitleaks default rules.
+checks for remaining known values, rejects unredacted literal credential assignments, then scans
+the whole candidate with Gitleaks default rules. The assignment check covers simple variable
+assignments (including `export`) whose names contain password, passwd, secret, token, or API-key
+terms. Empty values, semantic placeholders, and direct variable references are permitted; other
+values require review. This is an additional guard, not a complete shell/configuration parser.
 Inherited scanner configuration, local ignore files, and inline allow comments cannot suppress this
 scan. Missing scanner, failed scan, unknown flags, nonempty findings, or missing report block export.
 Reports/logs stay private; they may include private context even with scanner redaction enabled.

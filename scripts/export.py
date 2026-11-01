@@ -140,6 +140,25 @@ def digest_tree(candidate):
 
 
 def scan(candidate, scratch):
+    # Provider/entropy rules can miss ordinary punctuation-heavy passwords.
+    # Independently reject literal credential assignments without printing their values.
+    assignment = re.compile(r"^\s*(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$")
+    for path in candidate.rglob("*"):
+        if not path.is_file():
+            continue
+        for line in path.read_text(encoding="utf-8").splitlines():
+            match = assignment.match(line)
+            if not match or not re.search(r"password|passwd|secret|token|api_?key", match[1], re.I):
+                continue
+            value = match[2]
+            quoted = re.fullmatch(r"(['\"])(.*?)\1\s*(?:#.*)?", value)
+            if quoted:
+                value = quoted[2]
+            else:
+                value = value.split(" #", 1)[0].strip()
+            if not value or re.fullmatch(r"__[A-Z][A-Z0-9_]*__|\$[A-Za-z_][A-Za-z0-9_]*|\$\{[A-Za-z_][A-Za-z0-9_]*\}", value):
+                continue
+            raise ExportError("Unredacted credential assignment found; review the private candidate")
     executable = shutil.which("gitleaks")
     if executable is None:
         raise ExportError("Gitleaks is required for export; no publishable snapshot created")

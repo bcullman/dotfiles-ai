@@ -69,9 +69,11 @@ shared, platform, role, or host-specific. Never infer that the newest version is
 - [Initial inventory and ownership](docs/inventory.md)
 - [Tool comparison and recommendation](docs/tool-selection.md)
 - [Reviewed Mac comparison](evidence/mac-baseline.md)
+- [Mac–NAS comparison and remediation findings](docs/mac-nas-comparison.md)
 
-NAS, WSL, and Pi captures are still pending. No settings have been deployed, existing repositories
-have not been modified, and no remote repository has been created.
+Mac and NAS snapshots are available; work WSL and Pi captures remain pending. No live settings have
+been deployed. The repository has a GitHub remote. See the Mac–NAS comparison for the credential
+remediation discovered in the earlier Mac snapshot; rotation and history cleanup remain pending.
 
 ## Validation
 
