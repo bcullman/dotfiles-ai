@@ -1,0 +1,80 @@
+# cannibalizing from:
+# https://github.com/paulirish/dotfiles/blob/master/.aliases
+
+# Easier navigation: .., ..., ~ and -
+alias ~='cd ~' # `cd` is probably faster to type though
+alias cd..='cd ..'
+alias cd~='cd ~'
+
+## cp, mv, rm
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -i'
+#alias rm='rm -rf -i'
+
+# MISC
+
+# exa is sometimes problematic, so use ls as a fallback
+ls () {
+    exa_opts=(-labhFH --icons --time-style 'long-iso')
+    [[ "$#" -ne 0 ]] && command ls "$@" || command exa "${exa_opts[@]}"
+}
+alias ag='ag -f --hidden'
+alias brwe=brew  #typos
+alias c='cd __LOCAL_PATH__'
+alias cask='brew cask' # i <3 u cask
+alias dep-check='depcheck'
+alias diff='colordiff'
+alias dir='ls'
+alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+alias git-clean='git clean -xdfe *.my.*'
+alias h='history'
+alias help='tldr'
+alias hosts='sudo $EDITOR /private/etc/hosts'
+alias ipconfig='ifconfig'
+alias j='jobs -l'
+alias lss='find . -mindepth 1 -maxdepth 1'
+#alias man='tldr'
+__REMOTE_COMMAND__
+alias npm-check='depcheck'
+alias npm-dupes='npm ls -prod --parseable | xargs -L1 sh -c '\''basename $1'\'' dummy | sort | uniq -c | grep -v "^ *1 " | sort -rn'
+alias portkill=`lsof -i tcp:3000`
+alias poweriso=poweriso-x64
+alias python='/usr/bin/python3'
+alias resource='source ~/.zshrc'
+#alias sed=gsed
+alias source-map-explorer='source-map-explorer'
+alias top=btop
+alias wget='wget -c'
+alias where=which # sometimes i forget
+
+# FUN WITH...SHELL
+alias shell-list='cat /etc/shells'
+alias shell-change-b='chsh -s /bin/bash'
+alias shell-change-z='chsh -s /bin/zsh'
+
+# FUN WITH...GIT (see: __REFERENCE_URL__
+alias git-stats='git shortlog -sn --since="10 weeks" --until="2 weeks" | more'
+alias git-recent='git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"'
+alias git-overview='git log --all --since="2 weeks" --oneline --no-merges'
+alias git-graph='git log --graph --all --decorate --stat --date=iso'
+alias git-log='git log --oneline --decorate --all --graph'
+alias git-branch-clean='git branch | grep -v "main\|save-" | xargs git branch -D'
+
+# FUN WITH...NGINX
+alias ngx-start='sudo nginx'
+alias ngx-stop='sudo nginx -s stop'
+
+# FUN WITH...GAMES & PAST-TIMES
+#alias weather='wttr'
+alias 2048='2048'
+alias google='googler'
+alias mapscii='telnet mapscii.me'
+alias minesweeper='terminal-mines -w 20 -h 20 -m 0.5'
+alias pacman='myman'
+alias snake='nsnake'
+alias soduku='nudoku'
+alias solitaire='ttysolitaire'
+alias spaceinvaders='nInvaders'
+alias starwars='telnet towel.blinkenlights.nl'
+alias tetris='tint'

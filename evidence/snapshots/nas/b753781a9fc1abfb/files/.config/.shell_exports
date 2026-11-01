@@ -1,0 +1,23 @@
+# SHELL STYLE
+export CLICOLOR=1
+export EDITOR=nano
+export EXA_COLORS='da=1;36'
+export GREP_OPTIONS='--color=auto'
+export LSCOLORS=GxFxCxDxBxegedabagaced
+export NVM_DIR=~/.nvm
+export TERM=xterm-256color
+export VISUAL="$EDITOR"
+export LANG=C.utf8
+export LC_ALL=C.utf8
+export PATH=$PATH:__LOCAL_PATH_3__
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/lib
+export PATH=$PATH:/snap/completion.zsh.inc
+export PATH=$PATH:__LOCAL_PATH_2__
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/src
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

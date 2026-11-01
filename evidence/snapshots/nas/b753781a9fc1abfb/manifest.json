@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "representation": "sanitized-not-installable",
+  "label": "nas",
+  "family": "nas",
+  "files": [
+    {
+      "path": ".config/.shell_alias",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "cac5c5bcfa80d152a9a8ec6e0257e92da1951dbc0319caef9108d6b27a150da1"
+    },
+    {
+      "path": ".config/.shell_completers",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "0b2268c216866062b597e0a7177056bf7b16d96c40aa8f28a7a78f69558cf20e"
+    },
+    {
+      "path": ".config/.shell_exports",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c52a150bf9b2f502a3335c2ee902fed079e6cb2721a3d982ebc8cb181d148c90"
+    },
+    {
+      "path": ".config/.shell_utils",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "142ea91ac5d6c6766dc9510b41a75704331c390402b94d0021d5de96af1c623e"
+    },
+    {
+      "path": ".config/btop/btop.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b4f7136c814496d71a036a8284fbdb154adf01b8e3ec649f3443874e484d298d"
+    },
+    {
+      "path": ".config/starship.toml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "bfcc9adcaa70f33fa93a2a35609079fbaeab22e06d31755cb5f55115686b68b8"
+    },
+    {
+      "path": ".config/utils/convert-symlinks.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "81d77f7fa9c4608182ee7c2b8bb4bdb2b54c2811422be64ffe99d7430a91a556"
+    },
+    {
+      "path": ".config/utils/term-colors-demo.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "0e7baa3010dc49904c6f42ed8f9e6857c94ccd0c71c45b9766cf146b0c93f693"
+    },
+    {
+      "path": ".config/utils/term-colors-list.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fc2b18fe6f0962e801746ea1d57472fb7b0be71cc2449dc8b27cc8c66a9bd86d"
+    },
+    {
+      "path": ".nanorc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4a22aee43fcd13693c96d76e719aa791199ff84dc03416b2fb529c3fecfd856b"
+    },
+    {
+      "path": ".zshrc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "78554d9f2d76e7326f2a5e8269913a23c7a9bffbc96987608db56db504c538e8"
+    }
+  ]
+}
