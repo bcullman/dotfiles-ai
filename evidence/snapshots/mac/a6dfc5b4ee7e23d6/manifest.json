@@ -1,0 +1,2120 @@
+{
+  "schema_version": 1,
+  "representation": "sanitized-not-installable",
+  "label": "mac",
+  "family": "mac",
+  "files": [
+    {
+      "path": ".config/.shell_alias",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2693ff21c56b93c9d2271c2bc7420e339756eddf2c4b48a7516b1a5bb46dc787"
+    },
+    {
+      "path": ".config/.shell_completers",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6c5269a500bff2fc97eb207605273458ae7f3bdd87913b2ab32205a8da16f4d9"
+    },
+    {
+      "path": ".config/.shell_completers_openclaw",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "0326ec32d9487838426e34087ca35086c5d9dd9c53a7ca97d935f19e0582d588"
+    },
+    {
+      "path": ".config/.shell_exports",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "434972315fa8131e9bbde5f467c6450d5d18708d0b435734bfe87c7099542c0a"
+    },
+    {
+      "path": ".config/.shell_utils",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "142ea91ac5d6c6766dc9510b41a75704331c390402b94d0021d5de96af1c623e"
+    },
+    {
+      "path": ".config/NuGet/nuget.config",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ac902016510e246e59bf895c04bf109b07107c2592b9a4f44d5f299a3c754b7b"
+    },
+    {
+      "path": ".config/btop/btop.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7f08f5913d32f88a00cd813313d782aee272af49c288f032e5aa534eed9a2894"
+    },
+    {
+      "path": ".config/htop/htoprc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2798953968ef80dd43462f2694190877101f1c4db8b13a77f7c2342ab0f9c457"
+    },
+    {
+      "path": ".config/kitty/kitty.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8162a65f756ef10a439c4e8846170c113571472af6d0feceb58885b18dc8b3a3"
+    },
+    {
+      "path": ".config/micro/bindings.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d24f85e50c8b83d12c607e79191771a7cfff651a3b845dc3ed676b9bdaa662bc"
+    },
+    {
+      "path": ".config/micro/settings.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c39d4285da0a312da943518be5a8c54528b3f3b9cd9c95a132421660417639bf"
+    },
+    {
+      "path": ".config/nano/Dockerfile.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "c21aa7c438ac35b7977eca4c85d68e9a018cf4e2412e5cc5f4e92f6bf19f4ac1"
+    },
+    {
+      "path": ".config/nano/Rnw.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "20f0f24ac0a59f73f077e7ae9a0bcadb67b522dc077f0cce455edb1812167e0b"
+    },
+    {
+      "path": ".config/nano/apacheconf.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "1c65f5fe735fcb6c1a5dad226653a839a5e0b86b29cc2c3f658b314517959036"
+    },
+    {
+      "path": ".config/nano/arduino.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "3a12a052de5065fdae807e32c558b80435e04426f4fc0af99ef6e1f3a98a68f8"
+    },
+    {
+      "path": ".config/nano/asciidoc.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "e98b4c437be76dc6367edd9b6aca5e7247f7694831dd7cf17b145873cd6d34fd"
+    },
+    {
+      "path": ".config/nano/asm.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "435873ec484c63e8ddb8dfee382ba5e358f4813b3337d7ff56b828956cd89983"
+    },
+    {
+      "path": ".config/nano/awk.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "ab315068547cafb0f2fa3e99558fe3c815b09b2989da12e6ac8ddc9bd1de9821"
+    },
+    {
+      "path": ".config/nano/batch.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "9ed0196036d4529b8b7a7beed902d901fcdf51ac96244caeb22220a2c1b8cdea"
+    },
+    {
+      "path": ".config/nano/c.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "bade8d4aebcab429d178dbad1b146abe8f04cdb73217b7593a71bee9f1c03efe"
+    },
+    {
+      "path": ".config/nano/clojure.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4ab71441e7c2e1950f504f9abf17daf526469dc3335b3bef94a31eacacc67ba2"
+    },
+    {
+      "path": ".config/nano/cmake.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "17433935d64ccee336d41b4ae66d49793ae876e1c7f7100491145d584baf476b"
+    },
+    {
+      "path": ".config/nano/coffeescript.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "0b6225bcfa8c3233cd20f119538540b2d60e42633eca1bec73e69d2a29e038b6"
+    },
+    {
+      "path": ".config/nano/colortest.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a3aba8472578acd9f56880f81e93eebc9347311a9f603a39cab0610db1f3d7f7"
+    },
+    {
+      "path": ".config/nano/conf.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "b32943cefe5e87112a0983f36f4861a9811320256b4595811a1e29025a97eabc"
+    },
+    {
+      "path": ".config/nano/conky.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "962daaa6810578b1fcf19966e960579613b09f4a1b45dadc13632e46dd917366"
+    },
+    {
+      "path": ".config/nano/creole.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "d6adb507b15131a9c1729da6882067c91b4d411f82b300b39edf3fbcfb1320e3"
+    },
+    {
+      "path": ".config/nano/csh.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "0d3ad8710cfca461b7c82c019e9d384f7ba7f517126808c90aef2d15485ebd8d"
+    },
+    {
+      "path": ".config/nano/csharp.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "be085082887b06edf4694fe59b20e9e9f2354982f12b1114e7ec5fa47e7e6cf5"
+    },
+    {
+      "path": ".config/nano/css.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "502b1929c3bfcdd022448679fe171f6a38acacf57c1268de5f0a4fc34b143439"
+    },
+    {
+      "path": ".config/nano/csv.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "b2ecbbdbd34e521b2ee53c97b6f83fb2f9241935d616bf6138c84155f6b29264"
+    },
+    {
+      "path": ".config/nano/cython.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "9f850cabc3cc76a296661e619687f8fd1364d9fcab7bc5a74763d65a39567211"
+    },
+    {
+      "path": ".config/nano/dot.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "83f6a209155bcf415143b8742d7e876c4b217d2d6259136ecd71d1de70b0cfce"
+    },
+    {
+      "path": ".config/nano/dotenv.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "5e7a641c7a07c12032f46d675644624efca7ea8dbc380b29d5d0a34cd3302b83"
+    },
+    {
+      "path": ".config/nano/elixir.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "8286d54d6090141c5d965480902a0bbd144f71959fd9c2de72742b8c1306d353"
+    },
+    {
+      "path": ".config/nano/email.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "215634a1354c59f568ab024a6c29d49b8b8830169a619b1f5a921e58162c9cac"
+    },
+    {
+      "path": ".config/nano/erb.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "27c151035aa6c1d4721d28ed6b7a6639cda9c805ea9759851ce08836bbe05bfb"
+    },
+    {
+      "path": ".config/nano/etc-hosts.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "794ae418a4921f8497b4f1c20316514e446434144f91817853a21951f6ee514a"
+    },
+    {
+      "path": ".config/nano/fish.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "bb2d56ee16bf6cca24d730d06c3b0bb53a32b17ef42b8f157f5256c87db06eb2"
+    },
+    {
+      "path": ".config/nano/fortran.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a54f80ab8d499bea80800e16ad7cd57fb6fce965a3d809fbcf3cca3f514abbf4"
+    },
+    {
+      "path": ".config/nano/fsharp.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4c5afef84cf226878111f972961792945098204e94e6606f3795e0a6fd191426"
+    },
+    {
+      "path": ".config/nano/gemini.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "69ed573d198ad8689534792219403343b0bed67f97a7d576bcf5ad9e174bd296"
+    },
+    {
+      "path": ".config/nano/genie.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "af821970db514a02c506ab5d4c3fc662d9dd9e24060cb05158323339682f16f2"
+    },
+    {
+      "path": ".config/nano/gentoo.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "bb13e3aec5266a1ec4a98ad109c7a8c292bac9a72f004dca3cb61717b8e15b84"
+    },
+    {
+      "path": ".config/nano/git.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "17c90698d4dd52dd9f383e72aee54ecea0f62520baf56722de5c83285507c0d9"
+    },
+    {
+      "path": ".config/nano/gitcommit.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "17c90698d4dd52dd9f383e72aee54ecea0f62520baf56722de5c83285507c0d9"
+    },
+    {
+      "path": ".config/nano/glsl.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "8c3c5ebafb2d00cee31c5cbaa6894e684cb727661f675a5ade26bc21ffa1948b"
+    },
+    {
+      "path": ".config/nano/go.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "0e4ee291533b732229f1b9461702a5b57d898e7563ddec9a7b2fee72cc190fa4"
+    },
+    {
+      "path": ".config/nano/gophermap.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "40fee01e8d7a3d7dcfb19b972a99a168fdbbb1e00555408939d0160302751c6d"
+    },
+    {
+      "path": ".config/nano/gradle.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "6241d31ad3371813757508132b3a5f42daadb6d9b9b644327cb4380107a2015d"
+    },
+    {
+      "path": ".config/nano/groff.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "36de53f9a95af13655528deb1ecd14c9cd895f538f9581e150aaf9e1c3dc68c5"
+    },
+    {
+      "path": ".config/nano/haml.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a21c1ba70430a75690b5a7a0120d23e5f46e8f0214c8fb84782333acc525ef97"
+    },
+    {
+      "path": ".config/nano/haskell.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "5ab3b362ddb82cc0420de9f5071269a9085c02e6e10e6905b4ca83c1490ded09"
+    },
+    {
+      "path": ".config/nano/hcl.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "aeb9076f36c806fd28c9828e82381238b47c6d172a1d95c7ac4fc498b22eb320"
+    },
+    {
+      "path": ".config/nano/html.j2.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "3a9129ed28018c3448a77e4d5a3b11977949516a8a737e055409c4b4d6ac9da5"
+    },
+    {
+      "path": ".config/nano/html.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "3a9129ed28018c3448a77e4d5a3b11977949516a8a737e055409c4b4d6ac9da5"
+    },
+    {
+      "path": ".config/nano/i3.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "82517a34698bab30aba09a03fb901af5fed06957bf37f98bb9dcca5e6df27f75"
+    },
+    {
+      "path": ".config/nano/ical.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "cd7e5ef35cf7fe8fa2ffbc06ce754a862b00c423735ddbcafded7f15edbbb9ea"
+    },
+    {
+      "path": ".config/nano/ini.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "84ac4fd3bba3510aa1f091ed3a98f8919a66703fc9c72bd4f03378731765e98a"
+    },
+    {
+      "path": ".config/nano/inputrc.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "d8242243213958269fd91d952f5e506c6ebad819e47e550faf57f2fcd45f7cca"
+    },
+    {
+      "path": ".config/nano/jade.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "75777d2fa76e71e3ab329b40c3dd235d284cc3a33469fff197ccc5d035cc01c6"
+    },
+    {
+      "path": ".config/nano/java.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "35b60b9d5c7c932bc4112a07beafb24315a2eac795e9ce477a25eb0c24f4b9a4"
+    },
+    {
+      "path": ".config/nano/javascript.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "9955cf7a297ca27ea6ea6dda885c06dda688fc109fedc9bc019d963ef3e26ae7"
+    },
+    {
+      "path": ".config/nano/js.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4083121099df0d41048484125fdc7a3fc0ba551f84605992736fd62ee7f91041"
+    },
+    {
+      "path": ".config/nano/json.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f2c4801469ddba6c0c33038ae743d4bb745012b829b3b243ad48ffe7a86de3aa"
+    },
+    {
+      "path": ".config/nano/keymap.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "e5ae2553ec0852aacdac2eb44a4304f359a5d6717ed9f379d16b9f3fd697fddf"
+    },
+    {
+      "path": ".config/nano/kickstart.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4c1adcc65f014d491d95194210eb54c461e09e088a4eb32640ec2d3b82049c1d"
+    },
+    {
+      "path": ".config/nano/kotlin.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "0413275eeec0315e52ae030a98b5ea12d0d64f014d06c6b7f9ff3ed2ed5c3596"
+    },
+    {
+      "path": ".config/nano/ledger.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "6aec46a21b68c5c736dd151d82ce53f449c5badf9c25b27a148905dce5e81e91"
+    },
+    {
+      "path": ".config/nano/lisp.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "551dd67295cd418115be9f06fa6dfbf25ff74e3c3552610f2b87e006f46eb5a7"
+    },
+    {
+      "path": ".config/nano/lua.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a7887786cd474210e979028dab708dc218f8a0d264dbfcd58fc09be2558825d8"
+    },
+    {
+      "path": ".config/nano/m3u.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f78d6247ebfe17578dac1ba039ab4dd21b6d73b9d264a191d178f8d48b6c4f27"
+    },
+    {
+      "path": ".config/nano/makefile.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "1ac48160392bb3ac669b67f5aa74122252997ea2c73ba43a63c59916f6966720"
+    },
+    {
+      "path": ".config/nano/man.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "aef5d69cd765124d8c34c3d9fe26d54d52aece3bfba17e69dda35a7b0433be0b"
+    },
+    {
+      "path": ".config/nano/markdown.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "596db008a173c62962b7a2aef952e60cea08d9e722034cff90170fb22c10679b"
+    },
+    {
+      "path": ".config/nano/moonscript.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "79cedbfb4a8fb593e58d545d2e170bcf2558497ddb28569d18262117677cce7f"
+    },
+    {
+      "path": ".config/nano/mpdconf.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "fc2f0f12e2ce03d49deab69069fa4b975e3d07e91bc76cf3f236d6341050a217"
+    },
+    {
+      "path": ".config/nano/mutt.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "cfde91e0ea56be1f267c94cb662cf4a6e9a7bd0a9beddb06c32e6898d528adc1"
+    },
+    {
+      "path": ".config/nano/nginx.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "40a6e78d51bb73b77b56570b44f75f5e394a20a153ee8fc9baa0ee54f37b156a"
+    },
+    {
+      "path": ".config/nano/nmap.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4ae2ba9e0c23cee9d7f4f30a5385329c4a79cef81aaea9b46587f8ac23b078ea"
+    },
+    {
+      "path": ".config/nano/ocaml.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "60c0366705309fb5e4d5810dc336eb602567a74d919147cd6bce7f11d7416977"
+    },
+    {
+      "path": ".config/nano/octave.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "aeec187a3b912500f088ebc075c3e7a3b462f22532a27dea7eff5510c4e1e53c"
+    },
+    {
+      "path": ".config/nano/patch.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "6857d3190068fa1802131eebef4a8c69e96e259a64056d233e33131cebd58315"
+    },
+    {
+      "path": ".config/nano/peg.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "834af6e9c714839496297815303adde50a7fc4e54c3480f1430c1bd79117ccb3"
+    },
+    {
+      "path": ".config/nano/perl.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "91301825ca2ee00a5c59c729780a9d26326b105dca77eef1f895515d68f83bd5"
+    },
+    {
+      "path": ".config/nano/perl6.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "dbdaddb54a93161fafbcc5c4737ab98f11ebfcce819c72aec2957d62c0aa49cf"
+    },
+    {
+      "path": ".config/nano/php.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "c13db4d6c792b583731171de045ea849493370d08454b14ff61a2b63b1fb1adf"
+    },
+    {
+      "path": ".config/nano/pkg-config.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "6fca391321360bfba1e11b31e48e8a7a4ee1f0581603a54f1bd10048260c0c40"
+    },
+    {
+      "path": ".config/nano/pkgbuild.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "978bb4f1a95d814aeaa7561f991efa1f8ae8348eaf866dde910c27a1c2444ed8"
+    },
+    {
+      "path": ".config/nano/po.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "0e3a9e185a0ef7ee0525d9df9e51237c5722adef49683d86f21081dc43f2a389"
+    },
+    {
+      "path": ".config/nano/pov.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f606200cde872866b7626aff790c1c7f5f4664dea33a2d9d34d5ac210014c3c0"
+    },
+    {
+      "path": ".config/nano/powershell.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "9e6dbb670243aa3814ed3066ee297774c4d8c81261ca90d23ea40849d0df29ff"
+    },
+    {
+      "path": ".config/nano/privoxy.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "543d8fb315375cacaa84fcdcf460c740bd0fe72ed837dadc77609a68dfdb4cb9"
+    },
+    {
+      "path": ".config/nano/prolog.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "087d074e4c63e35a45c3c0ae2cedb0f936519582c128aa86c3919ffdf56c526b"
+    },
+    {
+      "path": ".config/nano/properties.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "1b5bd63330c702773d83ae59263d0583fa3b383b2c13a4087a1a20986462ee24"
+    },
+    {
+      "path": ".config/nano/pug.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4af5ac5e11bab85cc29aebfe2090cb77703de50695e597736aa2ff0e17fd9d4f"
+    },
+    {
+      "path": ".config/nano/puppet.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "6ab8cc869d516c377c64b7e1c0e396757bc33d6dc202833c052031ab0ac29c66"
+    },
+    {
+      "path": ".config/nano/python.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a94d69a7c16ae1f1621c166524b7c2cac0de18834f0f002057743d7072fab5a2"
+    },
+    {
+      "path": ".config/nano/reST.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4598cd5308c2805f73bf5b9d5409d0acb4539720ad6d0cff0f1ad98f86c92f5e"
+    },
+    {
+      "path": ".config/nano/rever.xsh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4a0cd12f94dc398737e6826d7b4a1118602035e41f545e7224252aa7c092d355"
+    },
+    {
+      "path": ".config/nano/rpmspec.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "62aa2ddb5c71ee413e63e5e1f5d64a39a276886765687d79b7c3ce6ee9551324"
+    },
+    {
+      "path": ".config/nano/ruby.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4232094eee11e0552b5623f95266d23f8dc7acfd0e91536f9529d06bdfb18760"
+    },
+    {
+      "path": ".config/nano/rust.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "ccf382acbfdb6dd24d442affaa9f9d9f7c85fc9dc599b68746083a03fa14d833"
+    },
+    {
+      "path": ".config/nano/scala.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "69797f1772afea888b83b05747873c3fb1aa7712185e25c7c5f06599de648967"
+    },
+    {
+      "path": ".config/nano/sed.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "6a4799041676469061e955df40c6c232a065de9838aea25c8d3222f564c89274"
+    },
+    {
+      "path": ".config/nano/sh.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "772e37ef13ea09ec74150044a61e54319e6f22b39368cb532b28c6bfc70c0daf"
+    },
+    {
+      "path": ".config/nano/sieve.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "28203cf1861e9d8c2fa82da9db4ceae3d6b2735e6e3205f84185cf8c19ec7e98"
+    },
+    {
+      "path": ".config/nano/sls.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "fcede8d5a9fae26eff24e76372ca02c39cb86b44375b6202376c214f4f9ae987"
+    },
+    {
+      "path": ".config/nano/sparql.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "36beef7997f32b59794f2a5195d09f93cc920db69ad840edd9d5966a391b6656"
+    },
+    {
+      "path": ".config/nano/sql.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "e8e1db2f6acb911d5f7b8f457feac8b38d1411beae249fcc02932acc2551677e"
+    },
+    {
+      "path": ".config/nano/svn.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "d6c75d64f2d747dc1c83170b9882fe44feb29d469ac63854894bc294199130cf"
+    },
+    {
+      "path": ".config/nano/swift.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "63442438f5be98b96c8610b790740dd3c7dc3707a6559b6e2846c55cde885b13"
+    },
+    {
+      "path": ".config/nano/systemd.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f21d47f6884e2b858d9c470421c780d266ff8068f395fb375ce0052ad73c492d"
+    },
+    {
+      "path": ".config/nano/tcl.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "58fa57bab6035ef0c530452effdc306df047121a45210270e28db70583464216"
+    },
+    {
+      "path": ".config/nano/tex.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "8c441524e7131619f5d9e79695cfa9aaf8ac399ae78606062b61946bc9697263"
+    },
+    {
+      "path": ".config/nano/toml.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "72bf597bc4e51794c4b45956f3a6c22c2ad321d7d77e96c484e72de7478c6712"
+    },
+    {
+      "path": ".config/nano/ts.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "67c904d332a3e8b0a594a0b73a8b114625361404b46df0d905ddb7b3e5bf38fa"
+    },
+    {
+      "path": ".config/nano/twig.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "43d95f0c4c246422e2b3d3bafcfd6e8571eae8cf971269f35fc1baa2c5241d49"
+    },
+    {
+      "path": ".config/nano/vala.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "cef7e857ed4799d213e4a8f5b498f446d940f5524fb067adb62dac92c4eff42b"
+    },
+    {
+      "path": ".config/nano/verilog.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "56dd91f1d0df25043b3cbfdc506b4b14e03a6a1e37a735550535a4ccd1908310"
+    },
+    {
+      "path": ".config/nano/vi.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f711803f20e463d5ebf6cf71a497e8683f62bb62bda2f492aa210957ac82aa9b"
+    },
+    {
+      "path": ".config/nano/x11basic.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "d876b2df69c940575be7e700481025808444863fc15137ad986166f7ed26a0f7"
+    },
+    {
+      "path": ".config/nano/xml.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "624fffc192c6765a8fd9814da29937258c495557723e6cc189ce87036ac3c2b6"
+    },
+    {
+      "path": ".config/nano/xresources.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a37f6d53706b5325e5c35be626fb4330388fd5f78f9d6fe2e580c65c3b5c5be1"
+    },
+    {
+      "path": ".config/nano/yaml.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "0eff6f42c6442ec3c1c570f07ec6882e793fbc0045d900aef36307681282899e"
+    },
+    {
+      "path": ".config/nano/yum.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "bb68641111d3ff5a1d8e0cba536cf2fbe4cbc392315013e3ea91a2b7499d471e"
+    },
+    {
+      "path": ".config/nano/zig.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f792dfd4499c3f8b4f6b957c546167f8c3d54a1315bfdd5146fe0948a2a646df"
+    },
+    {
+      "path": ".config/nano/zsh.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "bbf2fc4c3a72e1945805629b8f9c43a390e53e09352ed646a05e406bf311fc20"
+    },
+    {
+      "path": ".config/nano/zshrc.nanorc",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "dd5be4c88ad4495702fd7035d4dd618ba35edde61dd1e12986d7d66f0937a3dc"
+    },
+    {
+      "path": ".config/neofetch/config.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "17441e9aca5414061673a75549774608139e2e33691b4847febe784cbb95b01f"
+    },
+    {
+      "path": ".config/nvim/.gitignore",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "deddbf457656fefbe41bf26d3a376dd80e65d4b6eec8ef49ace3043b28f3ec96"
+    },
+    {
+      "path": ".config/nvim/.neoconf.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "1819a5b64b71521f214b374bdb3b4dd7531a2b91b881c0803e0029811da7f3e4"
+    },
+    {
+      "path": ".config/nvim/LICENSE",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": ".config/nvim/README.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "9969960a98455417b5f3781772f01528a64bb450e5f9db57734713ae920bd84a"
+    },
+    {
+      "path": ".config/nvim/init.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3b2d6e9976a515b7c8df08ed7c7f61a5751e9c08a6ff5579d621b87312c9e2c6"
+    },
+    {
+      "path": ".config/nvim/lazy-lock.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d6c0978399c62a88f18513b573fedb497d8f4f50fb8d7650a890855b1c1fc5e4"
+    },
+    {
+      "path": ".config/nvim/lazyvim.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d9d6f7791f267c3a44cd213599e2f86bb060ccaa3d1615f7651208290eda68bc"
+    },
+    {
+      "path": ".config/nvim/lua/config/autocmds.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "5b075712734f968b955887ce8b384db304b31a5b0a8f8e473943222be6f2aa42"
+    },
+    {
+      "path": ".config/nvim/lua/config/keymaps.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "660a7d9a603a1b20b9ac13384ee21093f648646d8f4d575c52c5e5d9847f6764"
+    },
+    {
+      "path": ".config/nvim/lua/config/lazy.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "14653a615b10689aa91915f45c284d07d5e7cb6c5f21fdbbf82c7664b9db4eb0"
+    },
+    {
+      "path": ".config/nvim/lua/config/options.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7ed69fe978886102021d6a0817338fdfdb44521e4bfc082bac41663ce312f26e"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/blink.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "165383ce52afb6c835a5fff16f1843a2e9cd3c549d95bca65612a8074485f88d"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/bufferline.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "386fac02d0635dae694eaccad8fe4ab96001b172edf7e26ad4bb3a2da8544625"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/colorscheme.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3ae0a18b4b1e8edc0665927b84d17aa9c13de9d8eee04687ad19bd4c52b2172c"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/dashboard.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "43abebd5ffd8cef1152c55f8b4cc34d80faa1485b37439961c9019cdbb6503b0"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/example.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "63cab8b37a319da640b073b6d654b11952776eac8cb55d8a6ac00e5f171366ba"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/lint.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "09043e68981b5ce953a2e53e2801204f338704aed20591d8c22cfbc5c61ca0e5"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/markdown.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c51272ab6bec89bf4c57ecb0172158e6dce5c266ece26c9f1b2c2541688907a0"
+    },
+    {
+      "path": ".config/nvim/lua/plugins/snacks.lua",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7d3e6fbe6042443c3b44a424b1e9ff44813061b76e6b772d4246d7d158e349e0"
+    },
+    {
+      "path": ".config/nvim/stylua.toml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "59841fbcee7b707144c6a470e96e96e96062d7a59d2e45bac445984d863e1af2"
+    },
+    {
+      "path": ".config/powershell/Microsoft.PowerShell_profile.ps1",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "bb368319a3366d9f006d19f74d8807d5567a195cf06fd15040039b0fd99736fe"
+    },
+    {
+      "path": ".config/starship.toml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ff9d0822f806db64f4b9265b028868b8f5850346a991a47b7097163bb74d0c91"
+    },
+    {
+      "path": ".config/thefuck/settings.py",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "0b65e6bfde5ecfddc6ee1c5864dba84ade6a812a889b836e9898f7299e3857c2"
+    },
+    {
+      "path": ".config/utils/convert-symlinks.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "46d73ce42a7efe23adae72b3dfad99c8fccb4d652d75d4b03be9f4a285e71a26"
+    },
+    {
+      "path": ".config/utils/term-colors-demo.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4f7c4349c17f2c37b9eba45ce4e69eca4cfc339f16e434bede8e2f15e2bfcca9"
+    },
+    {
+      "path": ".config/utils/term-colors-list.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "744fdd09bf7fb62cdbccb232bc655e7d4b2a2541346e6b2fbc9114314bad8eef"
+    },
+    {
+      "path": ".nanorc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3b0c7103a9bb98ecfaa70f7af5c8aa8dce76a6cf18599ffcc2e6aa2e20d83343"
+    },
+    {
+      "path": ".tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ffc054b1986e5bcf969804ed426cb461b95d13b7ba184334bdd9397d5c057f2c"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.editorconfig",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2fa258b9dc4f08292895e2179d9857875dc9088aa7df2c2dc7b80597fa7db2ee"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/ISSUE_TEMPLATE/bug.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "621bfbdbf00730b944c48210dad64c487171a1fdf0f655043bf0713068fc2e07"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/ISSUE_TEMPLATE/config.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f92203cfde82f25a415dc7a033fb489e3ce7654caeb30e40400c9e7fcab239e0"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/ISSUE_TEMPLATE/enhancement.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2f7fbf6739144e0eaf870f74994ba1d7af571ddd490ed9168d237fdc38134094"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/ISSUE_TEMPLATE/meta.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d501ba6c11b8d3741c0f281714cc1ce800086b504dbdef232cc4b96fb713638f"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/release-please-config.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fa121bf0a9d61e0e8d3146341fbe358cd6e03572044379638c36f4ed498ec8e5"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/release-please-manifest.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "67182d386f7501f47487875ccdb1eee0dc8ad21589fa1dd31e27b886771f681e"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/workflows/release.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "660bb8675021434b79c3142bea5bd2096c3ea492fc997bf129cbe9370df208fd"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/workflows/shellcheck.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3ad7467c23345c5e45a05181660a081ca6e85b8920ec3afa736a79d1f9f5b1df"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.github/workflows/test.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c1ea7e700d872649e546d79583b58bb1fde0309e4931f44899ae4dd424de6090"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.gitignore",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c82f1c701ea38b2dfef5925b1b8fc7b55265e2529d8c7a17b5c3c98aa6f9c193"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.markdownlint.jsonc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6ba05ae2c1ee4898fa18a88622e693325c6a6b96432c0a4b1650b1d8e52100ad"
+    },
+    {
+      "path": ".tmux/plugins/tmux/.shellcheckrc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a3d775f89125dd078b8a3c04e555a22f6f66a39b46f68cbac0e5f32b48487bb3"
+    },
+    {
+      "path": ".tmux/plugins/tmux/CHANGELOG.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "653d6c12dc866360d551a337431b2a98b4885f498001141ca2ccb90d3ce8e3a6"
+    },
+    {
+      "path": ".tmux/plugins/tmux/CONTRIBUTING.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "e4f2f0e5101e5c72e7e2f06031d832bd23d3ebbbcf28525677f4036d348b30db"
+    },
+    {
+      "path": ".tmux/plugins/tmux/LICENSE",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "814096d2c34cc216c624738a49356f32b7237733b4f7edb0685f4e50ef5074ba"
+    },
+    {
+      "path": ".tmux/plugins/tmux/README.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4f851d4d61d05620386490fe470dfb1eca388cb2c421efbf67fe56922c3e3bca"
+    },
+    {
+      "path": ".tmux/plugins/tmux/assets/demos/basic.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "e686b9d3c7b2c5dd845b26f8375fb13b61bde61cfc11f12ac3d38ef2b95b8de1"
+    },
+    {
+      "path": ".tmux/plugins/tmux/assets/demos/basic.tape",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "78e776d3a4fab16b918a943ed8dca92f48f6e1f801f92db2f3845d3a3d02d612"
+    },
+    {
+      "path": ".tmux/plugins/tmux/assets/generate_preview.fish",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8a3523c650cc67cac82b29646327b854bddcb9737c2de8c7a4018abede607b3f"
+    },
+    {
+      "path": ".tmux/plugins/tmux/assets/structure.svg",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "efe1faee62986e6813975b9968ed0b53b653930d1bff9729f00f27d73db402bc"
+    },
+    {
+      "path": ".tmux/plugins/tmux/catppuccin.tmux",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "c805a23ce2441e95c5dbfed0bf0892ce5563859a48df6867553e9d2eb24ef40f"
+    },
+    {
+      "path": ".tmux/plugins/tmux/catppuccin_options_tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8c08a7deb9ecc98783ca549d2929bd08b4ec0298e3b810af3dcaec7050b2f38d"
+    },
+    {
+      "path": ".tmux/plugins/tmux/catppuccin_tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4754e26d33280bcb51c9c8b8572b4e581db60ed1f7a0ba5e73f1df283f94ad90"
+    },
+    {
+      "path": ".tmux/plugins/tmux/docs/explanation/design.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d918c337ce42a80220ee1571f80040aaf43c01898592903f53140b1055c9c00d"
+    },
+    {
+      "path": ".tmux/plugins/tmux/docs/guides/troubleshooting.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "94b3bea8b2f1e5bb172b485723fb7110190f1c89a4fa19f5775403a570948661"
+    },
+    {
+      "path": ".tmux/plugins/tmux/docs/reference/configuration.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "58d3d5c4ec6e20d4faf0a2a5f7c9616535c01eb694a6ae7fab17f99dfc6185f5"
+    },
+    {
+      "path": ".tmux/plugins/tmux/docs/reference/status-line.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "80c26f4a271e162441d65b9a0a8a16fcf60b77124ca1779fb27a4dbb979bebb9"
+    },
+    {
+      "path": ".tmux/plugins/tmux/docs/tutorials/01-getting-started.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "472c1c12578b3ba68cc9ce67bfcdd868bc1c0dbc8b0f3f1e6ee0b7544fdda749"
+    },
+    {
+      "path": ".tmux/plugins/tmux/docs/tutorials/02-custom-status.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c5f0b2683559b34e1fb8f3e01efd57a97bc8bbad7ab0ba46cfa02c18e33efcf1"
+    },
+    {
+      "path": ".tmux/plugins/tmux/renovate.json",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ad4160ce2d862186e94db4bb781d33d9040a32a16c5120cecd394f186c2e2fc0"
+    },
+    {
+      "path": ".tmux/plugins/tmux/run_tests.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "431624b6957d00a754f634e619c640dd9ed25181e85be36dbb5d28b83dc61181"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/application.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7ad4efafdd39247064b3d93f67cf6fa042e8e870fb7e1a135880e800afb6ddce"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/battery.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a9be332f6af84c1da0d9cd5f75778a4413f5be7e7f82b22fd254b670b69298d3"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/clima.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "e4fe97947a9b9f6189ea81cda124aefacd239562427cbc9abffe5f89ec8f4202"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/cpu.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "116d47ffe4ee34af941eb7c81337bcfe9dcef14a79e1b4aa0d3b72d8712e9596"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/date_time.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f2e30ff8b59a86935af61d1cf39de89fa51a8b4e674bc56b20175b63a00ffd5d"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/directory.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7d5193d3c36fd83bc08f2191e6ddc57e781e306f3b6e7b19e35d51cbc62e7d0f"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/gitmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "bffe9e1e45642178c070facd33744cc3a38e12392aa8ca3d41f7b84ccde81fe9"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/host.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fc162a04a7dfc3f26a2bb1f4af7d5377de0ee8a6cfc44592bb4b6557eb2e3a20"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/kube.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "abf189f0f3605b6bc829482341e5b80b0cd55e9c88f53e4a3a3aafc6cec1aba9"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/load.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "1c116a3900e760936bb8f8c9ebf6e97e0ec272ef5469a20838cf1ba9a51222b6"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/pomodoro_plus.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a9c57a5a39565494a995486a531034e8838b93968dc1b81ef56ad42b3569d7e9"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/uptime.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d56874c54b7b31325db27547c998310734488f6201cc705983f60d3d4be0d161"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/user.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "1fe1a8861b469c2e4e6df7f5bd1a587aa19506771814a4e7a81b2d0d6a410e63"
+    },
+    {
+      "path": ".tmux/plugins/tmux/status/weather.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8beed1007aaf7a5d478e6fd6477822acfbf64164c28437c64134ac7458d87d0a"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/application_module.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2145a54de4e8971bc64c44cd3af7adca7350c33c8bca3bc1ab67532d02e21f59"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/application_module_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a77f6fe4aa88a9876150b49e93c5426c521d0afbb3a1ac31d99e79ee1fa6e330"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/battery_module.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b8b5b8ff99e5ee9919e9ea9af174aa186e68a23b4fa31ac60b1b03ea7fe3a741"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/battery_module_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "82261c2e33dc6217d6bfbf1df8d46a6ce87446a7080c701cb343a77a17bf27f2"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/cpu_module.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "203374bd48253bf1f3ed4b9f2721e1cb4b41ba09d3700a09db4f8cfcb718df3a"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/cpu_module_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "af487142031a76b8e143cb19a5ca3c0a578adc78cf2f7bed485a76f382bb5b80"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/default_options.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "d03cbbb6e3071c1c79c00450d7b52e687d3a8a07fd11e090ff8f88b03b97cdf5"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/default_options_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ed4a99ba81ce7acdad1542432994dcaac833938d79f77fa0b69e14c3dbd48389"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/harness.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "2945a071654bb613ee7d2c52681da2e8dddb6f3bca2676ff3e6cc1a45cc850d9"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/helpers.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "dcac0799f8067e3e3ae1093f47306316240697a1abf4492c92befbab63adbe0a"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/load_module.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a37aacb801fcd0a42648b04cd2fac1ba622932e699174fc80f8bdb9c08035105"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/load_module_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "65861740d0be9f9ec082c34002ab56556dc843bf408dc21f4666788b47a77394"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/pane_styling.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a038e6b3c29f5179d447ee7a88277ff2a991982db851a11f14a4f9d3ea136700"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/pane_styling_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ec7d745175b76bf0e84617e255b2a390c927bdd1ca74faf7f680361c4cab6829"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/window_status_styling.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "50998169b288d1a7a06a5ac4b64fb42b234eadf806faaf87bee9978c4f3725e5"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tests/window_status_styling_expected.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "45ef3a7aaff4a9fa456a8bdb3700072f6dada2360f621c34cac28e32aad4bb77"
+    },
+    {
+      "path": ".tmux/plugins/tmux/themes/catppuccin_frappe_tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b71517b00d827efa33e6b41b3900b50ff62110139dbdff7707ce2198ab107baa"
+    },
+    {
+      "path": ".tmux/plugins/tmux/themes/catppuccin_latte_tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6bc8b239f646c662ec73ce21a8a3e74b6284c820a54f56c2ee38e637ffcc54ad"
+    },
+    {
+      "path": ".tmux/plugins/tmux/themes/catppuccin_macchiato_tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8672dd2c79fa22db7f08418a6dd4b6f16e9eaa71a2698cc2c9bd085f44aeb00f"
+    },
+    {
+      "path": ".tmux/plugins/tmux/themes/catppuccin_mocha_tmux.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d0beef595f8fd382aa3fea471da088d7561642c60165ed2b0135954fcb7cef5e"
+    },
+    {
+      "path": ".tmux/plugins/tmux/tmux.tera",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8b9611a649e1fcbe70f63fdee7fc04bc495c09140e76ff17c970300ef24b4fde"
+    },
+    {
+      "path": ".tmux/plugins/tmux/utils/status_module.conf",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "11117224f8f23b9ee90fb739d207835423beb7ab026a696166d77da7f8273c16"
+    },
+    {
+      "path": ".tmux/plugins/tpm/.gitattributes",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d16954fc0a22322322211582b29812fb6c80a7a0892b766fbebf0ac109e767e6"
+    },
+    {
+      "path": ".tmux/plugins/tpm/.gitignore",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2c377105a04853933e322cb06b7edc687f69548e6ac96a0526f5a21c1745d0e9"
+    },
+    {
+      "path": ".tmux/plugins/tpm/.gitmodules",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "56a2927ff6b5349c3330a786b3c73c31f825b283aff3c495860d45d62d4b2191"
+    },
+    {
+      "path": ".tmux/plugins/tpm/.travis.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "669995c8d66be62f7b70296fdcdd6051ab751299ce22099f5246972c84f77796"
+    },
+    {
+      "path": ".tmux/plugins/tpm/CHANGELOG.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d69ecd63c58efef82437724269fad6c649b3c24dbe80a6b75eef75cc5e63b1d1"
+    },
+    {
+      "path": ".tmux/plugins/tpm/HOW_TO_PLUGIN.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a066a7a89bb3b0fb0a6dd47cc55b9433e66b19d4fb2c94baffd6aced30ebdfc3"
+    },
+    {
+      "path": ".tmux/plugins/tpm/LICENSE.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "9666a6ef8615a5a5e3d942a93000ce5d7c3f752c530819afef5a20e18e030a17"
+    },
+    {
+      "path": ".tmux/plugins/tpm/README.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7d9b71917d2d321ee2b7e7928636454d4b465b16b2f77524aa366e736c46b529"
+    },
+    {
+      "path": ".tmux/plugins/tpm/bin/clean_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "68a6d98af2c46dd2daea411e82d3c9e743bee8dd34074a8b61cefcdcc7498af8"
+    },
+    {
+      "path": ".tmux/plugins/tpm/bin/install_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "896a2eb1acbb0734e755cd57689780829392435c60cf9e1cd9266709716f6685"
+    },
+    {
+      "path": ".tmux/plugins/tpm/bin/update_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "604b4f9e1f8839d33f98d873478b6d2a381b2dc741fe66f926474f5e38214a21"
+    },
+    {
+      "path": ".tmux/plugins/tpm/bindings/clean_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "85b5b6e74e2b4daa032b8939f00e7a0a2bd1153408ddfb74622a6d1fa77f9d93"
+    },
+    {
+      "path": ".tmux/plugins/tpm/bindings/install_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "2e4b44779daa4ac0f53875f1a50d42f32e4585ce705563256920983e04a6b582"
+    },
+    {
+      "path": ".tmux/plugins/tpm/bindings/update_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "067e791b16948828264fec91580d51ad81fc61106679ad0c8c236a24c6cb772a"
+    },
+    {
+      "path": ".tmux/plugins/tpm/docs/automatic_tpm_installation.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "51845238e606c375b2f0906e4b9f8edb6bff5e28a15101dbcd3fda750b8c740a"
+    },
+    {
+      "path": ".tmux/plugins/tpm/docs/changing_plugins_install_dir.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d88d349f3ba678434c1e3ce2fd1962e6a18df436a816e4454cf818cb494229e0"
+    },
+    {
+      "path": ".tmux/plugins/tpm/docs/how_to_create_plugin.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8e807e1e040e54d2b98fc6fe75f332930e6e1304fc93803c577c88d8d02c672b"
+    },
+    {
+      "path": ".tmux/plugins/tpm/docs/managing_plugins_via_cmd_line.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3a73655bd868962fe8b408201aa9379c7303693b1c61f98f64e8126c46c5a631"
+    },
+    {
+      "path": ".tmux/plugins/tpm/docs/tpm_not_working.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8fd102f3b481457393db288c0004e278c1f9ca45a51f379aaf95042df6d6a543"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/check_tmux_version.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "49e2b2874bbc5b64bf225ac51239c923d965aa8e85528d7850870ee5e1daa421"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/clean_plugins.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "a5dff271b15ff1e161609b3ed0ecf92cef80e62408af535d6f7420be11135939"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/helpers/plugin_functions.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f56ad97623921b5ad4058e3710441518d851112d3fd46fbe2eca958a945a7ac4"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/helpers/shell_echo_functions.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "16cc28a52ee5a7fb220bd62266021e074d47d56056cd041ff08eade1dd6e325f"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/helpers/tmux_echo_functions.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "59fd0ea1ff8f9584168e793a2377eafddb6616f4438da7c5eb214eb0786d5e48"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/helpers/tmux_utils.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "08ce6f8e988a77b168ebdafa1fa5e8ffffe8d6cf85651c8346f51e4dc295e559"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/helpers/utility.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d56f5b62eea4e43b605b3c57f0a0739f99d7ad04c226afc0b0d528f909e78a25"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/install_plugins.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "34b8428939fd7de4871c237e38e3fca13e82693ad8ae1c4c7afdaa5e587f2081"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/source_plugins.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "be981ffc651cbcd7896e8310a5e2ea473cde69e31a43e3d8f0ebcf2ed7eb8e1f"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/update_plugin.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "4a4868b21aff886bbd24ed5070eb9c7d17bc5d9f3b41680e5eae2eec6d193759"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/update_plugin_prompt_handler.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "c568d3f5ce614a61a122d248768c8327adb0bb7602062909df991f22b685b698"
+    },
+    {
+      "path": ".tmux/plugins/tpm/scripts/variables.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4209ab8a22399b675bf049bb7e238c5237deec1d894ee206b357013b13841548"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/expect_failed_plugin_download",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "00449d31f407b9126f24248830f0aeb2a5f2d69331e886cc70fc2a2616717b70"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/expect_successful_clean_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "c5eaa2fa1416608af8b92c19f257e978a140ad1610ff57a16fc415fcafd12732"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/expect_successful_multiple_plugins_download",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f4d037c576f6dbd8b87d4dc9a72e52e89a21763afb522fd2749c5f9ff56ef5db"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/expect_successful_plugin_download",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "58f9baae1cabf122579975f16cc1be5f9df6ece792ae4c7b240835e4ffdcadbe"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/expect_successful_update_of_a_single_plugin",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "41345878ac5a57320d812778df1eb8777f2943f5a73d79536bfb636ca5579633"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/expect_successful_update_of_all_plugins",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "f0c8579df6dc300f82054098e7d237e4f81ac13226fd68cc65bf22c9be38194b"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/helpers/tpm.sh",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f3ebba43671b246621401fc8a573e6c54e6261a7199985d7491bedf25bf61f8f"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/test_plugin_clean.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "506d11d5217daf04bc06f451db3174d93e701446769cdf55c8fe5b50c56cdea4"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/test_plugin_installation.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "e591fcfff4cf114c1d590a2321641ab1a175be39b4db936e79a26df18e293eca"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/test_plugin_installation_legacy.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "9bc8cc6917e7c73b3f58cac26f18c859e8e7629b49374fc5c771fcf69a2a4197"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/test_plugin_sourcing.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "eda38e1e005d446f0b78cccf63b0c997a96001c10285fa115ceb11ded2c87bc5"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tests/test_plugin_update.sh",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "eec3013b71855027fc988f2a90f1d87f4f408ee99d768c8e22f1fc0fe22f6faa"
+    },
+    {
+      "path": ".tmux/plugins/tpm/tpm",
+      "status": "captured",
+      "mode": "0o755",
+      "sha256": "d1d034032f9231c34a2cef32fb603118d06e4a4fe89f4bd662c3fca93717cdfc"
+    },
+    {
+      "path": ".vim/autoload/plug.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2eec4e7e8b14e11a47993cf97ae3bdac68b5f3a7de97c081417cce3f16432bb1"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/.github/workflows/ci.yaml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ffb49054a146fcb3c4c276cccc99256db0cc451b954bfcb8a965ca802d8a8fa9"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/.gitignore",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "905312149e97ca655665fd165bced3783a6cd3097af386ed9419a3c534ec1eb1"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/LICENSE",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "beab84b2828ea99162b807e98d380d78fafc9c1dadd8830ccb5d606c3940773d"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/README.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f34d36b1b6b81f889da164ce1efb5cbf5e46d09b60693c3d51bc97f34708bfb9"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "84371ec5b08ad05f8bec4d40695d961b1f310c1515bf5ca65e68e7cc6c36640e"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "5e0cef413f5785879812418180ade1c2741d02f38fbdf67315d30c10f9c306c3"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/16color.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "0a9ffd396dc20e2d3a38d8046dcb05b1bcfb35b9d8b80e816ce0189281537358"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/OldHope.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6f66861bf2293510c23642ad3ea7e917dd5eb8b6eed86d366815030d325cc800"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/PaperColor.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2e9bb53a3179b3f3f295030fa30412788f79dc7f7d0692d711f6a3b83aa0cdd3"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/PaperColor_dark.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3c7967822bded8c16134e1e528cde92a7d2b40ba14e5d99707c8f6b3fbbbcbf9"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/PaperColor_light.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d39babb3c3b0ce3e011b3c236631f12c6e17b1ea9e8aa68b90f78828315dfc67"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/Tomorrow.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7d3c6f223d721780095e7f39311b6e0978303ff54ff552999c417247a12dca7e"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/Tomorrow_Night.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "328e58372e41d8a47dd11c4ca445cb74b7eda58207f6c19cbd271f8c56f26642"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/Tomorrow_Night_Blue.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "12271f73dd3b46cf0c81b9dbca0ec3dc614700f5f9bc787dd6312972775d9e82"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/Tomorrow_Night_Bright.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d1002eb5cb12cd81338d227c5205143100b9c4f6b3b4973797ab41ab3c288490"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/Tomorrow_Night_Eighties.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "150299fd81be50e2d65c767fe226745c7d9b7221c1ce63803b3f52d23bf526ee"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/apprentice.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3fd8b973434c7e9dc77eca4aefbf3c67577eac9b310106037ebb3ac30cab2f51"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/ayu_dark.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d7e574d46115e796a8bec32f00827ac7885905bcff539687ed9373f7fc078650"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/ayu_light.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "0387e365694f83c94bc932dd57bf236ac728d64b4479ff545d5e7cd525bc7c92"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/ayu_mirage.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b001dbcb96487995a49423fbef98eccf0a7f7c5e7e3d37f6d3ad4b5e0ec2c782"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/darcula.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "223a7a9d9f783aac3802281f49369ad70ed92e99fa3cb8aefd7852f473458f5f"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/default.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "88826f43f2be7dffd3487813864e3d5512bb5ee1eda349f6b928750599632e2f"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/deus.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3113bfe316304dcb3e9ae8586fef78b3f4e05939e7dd550a2441fc24dcfd25d1"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/jellybeans.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "83483650fe6e2a7a5ff6b46b529bc04ac99a8fffb75572060e21c62a80bb7577"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/landscape.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6b70721a1f210fb51cf807e7bfd44d97f3e2813fe2474c7f7aa6a82920abbd5f"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/materia.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "401bac9dd6f4a822ce75c821e23d758612ed0314f93b653cf808faeba79cce89"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/material.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f339137aa9102254e3abf052f94d0adb5626baa47addc3b61b49f3c18e0a8b9d"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/molokai.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "e7cda252cf7b56db92c401f5818e393975ff299e3b7b7f9c205fe4b11ccfc6b2"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/nord.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7b645e9bc74fe5d64b6261f270e9e94b0a42d8f53135297426da508d5491887a"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/one.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6121078d582a5d96f983e3f3fb87d58a99309d8980f4d5f9c7f607e8b6f6e066"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/powerline.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4ce99aba32e4c888ff184b3a2780809b77dacd378304ff205999cd4febd672cd"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/powerlineish.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "39a4928a5feea2ab4329f13d76de678e73a575de9845f25f23f93644e2660a6b"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/rosepine.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7ed285982f9fe2e31b07980761e41437abbd03d44f082f0c296e15500ace72a5"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/rosepine_moon.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4f00f8ac09cc2a30fef67a672fc567f8e45629f42c640118872e9e0c9f582ec9"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/selenized_black.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7c80e9d8e64274d12deccb5d906f8983dccc621dbec58600316c2530c45d3776"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/selenized_dark.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "651b0523ccc8edaa365b85941a3297274d3a706e6bf01d59d8bdbfebe8d30f2e"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/selenized_light.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fe39c0fd540c20e91e356efcfcc23762012aeb1a4e1eb4dc96fa210811bf6ca2"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/selenized_white.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a7efde4f22720b3757fc715342edd8fc7e9f0cea879f1e10197aa75a21ea6cc4"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/seoul256.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6ce0242c4f261b825024f1f4404a685c703fceb184a455be7e9623ef9eec93e9"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/simpleblack.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "4ee0e402a60acdef44d6d75bde9aaa61ad6d35c7e6c1ac14674b1b53a264c4e3"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/solarized.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "546513234cc1cd348c956db4260496a6df376b7ebb010d850b3527bd85e6805b"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/srcery_drk.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3ec1409fd8e43a1c766e835f955e846bd5c954c71cf0c53ffe6c315fbafa09a5"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colorscheme/wombat.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "c264448abdbb6037c1610eb8ee1aad1c2667631de8f1e607800ea2d8742ac046"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/colortable.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ed6c18ae61c4c3ebba7d9a239a59f900a8e2629129fcb9cc390cbb6b553f0bd7"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/autoload/lightline/tab.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b03c877a7df466839d0ac279657a2905707b46366b3f8e573c684c101d6bc9e5"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/colorscheme.md",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a0db254f8e22961b2ba1006daa6fe353f2ca3b92a23ded25fa0d985d10296056"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/doc/lightline.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6f6d95898bd9076d21a969be45661d2dade27d7a47d5693c6c33a07c26f03dde"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/doc/tags",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "1c4a1ec088651f9d88d48df4d571753ca8efae8ad6fd57cea8eca5e0ab2444fd"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/plugin/lightline.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2f2bed569d868cd735cb8fd59cc0059d4215afb699758aff86b8f0afd5e7f794"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/.themisrc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "2571000dbef7ac2197fd77807f6b71cc15be6a2035a77c04d608f369c94b4828"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/autocmd.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "49139a541dfa64043216b247814df0229153b088275d959cac72e6c33d60df19"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/concatenate.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "08d37673604c4da8c9edac7bd5a8c08202604d0771e13e52fac878c640af60d9"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/error.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6500c7a407fa6d107b026f301e300decebedd6656966b85b1471c213a50a7d79"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/expand.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "3d78314e0e531cfd3a3f0a5f49b62f760e15e09e0fa886be336de560eb7c5b64"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/highlight.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fac9d6e9fc91b5f345547fff93917bca0613e2030a15a37c225188799541fc8f"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/link.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "a38aee9bbef99d16c5c75132d09de5a384fbb29ac4b55d71dc90883eeccfdc0a"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/mode.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "9b47838cfab9f3e66780d2e77d575e318077c4c5cf33db7bb97a0993f84e054d"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/onetab.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fee2adb0a6086a37ad28d1bf43ea68479d73b30b9488fe4dfa45fcfef8423e5f"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/popup.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ba00f902c324e102b1b18aa1811360c7089bf7abad0437e7c35ad1fc42444505"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/quickfix.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "d4697c6c4495bc62dfda0907211fb5d849348c22e791ed74a526b2b45714dd13"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/subseparator.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b9af4215bc1864d995b6b9cd3533f6184e560673652f4e71d57517e24ad0ee55"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/tabline.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "fbd68a2860dccb141d3cb395ddf47e324ae59a573d64eee236fe5154d56042fa"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/tabs.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "257dcadd5dbefef187d92c20e6df3ca5f7c7b0c2a076f670a55f85239205a5bb"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/toggle.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "af6af4809ecddedbada4635bb92e8d8fa63dbb616bdedc03766deb7da589f4cb"
+    },
+    {
+      "path": ".vim/plugged/lightline.vim/test/uniq.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "133b5fd71ffb1e88920bd9d4d7090b03c0a83318365e5e84d7eeb87b535946f8"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/.gitattributes",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "6dc1255191d718c90e7a6c9eb2681a502df03e2f5862b6e7482ea2e7318678c7"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/.github/FUNDING.yml",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "27a4b49314531e6c725a406bff4856125aeb4dc849bff040833c05b30a33baa7"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/.gitignore",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "905312149e97ca655665fd165bced3783a6cd3097af386ed9419a3c534ec1eb1"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/CONTRIBUTING.markdown",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "cdb764a104f0f280c88b082fd96eb1c6d8c37a6f6ae02aa98be3ff6715de87b0"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/README.markdown",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "5865a560addd9b603b2dc22bb3658bc77192b65716d573bd398d1f53f0e6f81c"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/autoload/fugitive.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "f25e8718fd1ef02368031f67bf227524caeaa2008b88973b7039e1dddd7417af"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/doc/fugitive.txt",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "5a026e44b0716602365d09023d82a512f7503cc21de57775b003b89632bd8c38"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/doc/tags",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "49d243451d4901f74c67a670b7cd3a09c79b52c0e85b0f209ef140dc03d489a7"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/ftdetect/fugitive.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "ae999178d117e7bc51385efc0123eee8ce06adf1fabc22c5e56d31210b162df0"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/ftplugin/fugitiveblame.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "7217338c33a74e2d2c407dfbf2b57f506bf4004e8cfa28a3a88d1fd4318590c8"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/plugin/fugitive.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "5ae80f1f60d8daa7bae2cd3bd382849a3c0511bcc5564fbe0a4d8c6ce9073286"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/syntax/fugitive.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "115a7ad71f3772b1d43e58237bf2427f63b3625644f760deb1eecf14c7649a95"
+    },
+    {
+      "path": ".vim/plugged/vim-fugitive/syntax/fugitiveblame.vim",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "71dc8e6170a316545425cf464e266de3dfcdc60e168f082e972136439ebf6a00"
+    },
+    {
+      "path": ".vimrc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "87940824568e265926ebff7d987d993c9ef504fd685de189e8b2beed7daae970"
+    },
+    {
+      "path": ".zprofile",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "b72ca3ed77224955e0db407d0d2632b97b4c85bdb515951408766cd4cf2070fb"
+    },
+    {
+      "path": ".zshrc",
+      "status": "captured",
+      "mode": "0o644",
+      "sha256": "8d2144e4301f6e421a505f427bb5fbb6e165ca216897b4618b68005e185c8ccd"
+    }
+  ]
+}

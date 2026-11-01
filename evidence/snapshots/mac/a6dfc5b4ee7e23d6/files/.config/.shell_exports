@@ -1,0 +1,52 @@
+# SHELL STYLE
+export CLICOLOR=1
+export EDITOR=nano
+export EXA_COLORS='da=1;36'
+export GREP_OPTIONS='--color=auto'
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+export PAT_GIT_CLI='__GITHUB_TOKEN__'
+export PAT_GIT_SEM_RELEASE='__GITHUB_TOKEN_2__'
+export PORTAINER_API_KEY='__API_KEY__'
+
+export LESS_TERMCAP_mb=$'\e[1;31m' # begin bold - red
+export LESS_TERMCAP_md=$'\e[1;35m' # begin blink - magenta
+export LESS_TERMCAP_so=$'\e[01;44;37m' # begin standout mode - yellow on blue
+export LESS_TERMCAP_ue=$'\e[0m' # end underline
+export LESS_TERMCAP_us=$'\e[04;36m' # begin underline - cyan
+export LESS_TERMCAP_me=$'\e[0m' # reset all modes
+export LESS_TERMCAP_se=$'\e[0m' # end standout mode
+export LESS="-R"
+
+export HOSTNAME="$(scutil --get HostName 2>/dev/null || hostname)"
+
+export COLORTERM=xterm-256color
+if [ -n "$TMUX" ]; then
+  export COLORTERM=truecolor
+fi
+
+export NVM_DIR=~/.nvm
+export VISUAL="$EDITOR"
+#export PATH=$PATH:__LOCAL_PATH_3__
+
+export PATH=$PATH:__LOCAL_PATH_6__
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:/usr/local/lib
+export PATH=$PATH:/snap/completion.zsh.inc
+export PATH=$PATH:$HOME/.dotnet/tools
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/src
+
+export DOCKER_DEFAULT_PLATFORM=linux/arm64
+export DOCKER_BUILDKIT=0
+
+#export VOLTA_HOME="$HOME/.volta"
+#export PATH="$VOLTA_HOME/bin:$PATH"
+
+export MONO_GAC_PREFIX="/opt/homebrew"
+
+export OPENAI_API_KEY="__OPENAI_API_KEY__"
+
+export SCRYPTED_USERNAME='admin'
+export SCRYPTED_PASSWORD='__SCRYPTED_PASSWORD__'

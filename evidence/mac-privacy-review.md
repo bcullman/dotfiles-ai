@@ -2,8 +2,14 @@
 
 Reviewed on 2026-10-31 (America/Los_Angeles).
 
-Snapshot: `snapshots/mac/b5dd9f9a5d04abc9/`.
-Full reviewed digest: `b5dd9f9a5d04abc95ec8bc4b6a0fdc9f34521893ed10093a60689319d9ccbd9a`.
+Snapshot: `snapshots/mac/a6dfc5b4ee7e23d6/`.
+Full reviewed digest: `a6dfc5b4ee7e23d6fbe338f2b02653c52aef382fde7dfe9b46a5246f008fe7c4`.
+
+Correction: the earlier snapshot passed Gitleaks but retained a literal service password. The
+comparison review caught it, added an explicit replacement, and rebuilt this snapshot. A new
+independent literal-credential assignment check blocks that original snapshot. The prior version
+has been removed from the current tree, but still exists in pushed Git history. Credential rotation
+and coordinated history cleanup remain outstanding; no history rewrite has been performed.
 
 The snapshot preserves all 352 selected files as sanitized evidence, including application settings,
 syntax definitions, plugins, and completion data. It is not intended for installation. Raw captures,

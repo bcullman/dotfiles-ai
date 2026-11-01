@@ -1,0 +1,3 @@
+source ~/.config/utils/convert-symlinks.sh
+source ~/.config/utils/term-colors-demo.sh
+source ~/.config/utils/term-colors-list.sh
