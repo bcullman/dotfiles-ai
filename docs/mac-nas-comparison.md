@@ -1,7 +1,7 @@
 # Mac and NAS configuration comparison
 
 Evidence: Mac `a6dfc5b4ee7e23d6` (352 files) and NAS `b753781a9fc1abfb` (11 files).
-The NAS evidence arrived in commit `3808aec`. All file contents were checked against their manifests.
+The NAS evidence arrived in commit `d1a7e6b`. All file contents were checked against their manifests.
 Work WSL and Pi remain pending. No live settings were changed or captured scripts executed.
 
 ## Evidence limits
@@ -63,9 +63,10 @@ review missed. The corrected snapshot replaces it, and export now independently 
 credential assignments. Tests include a synthetic punctuation-heavy password, and the actual prior
 snapshot was verified to fail the new guard without printing its value.
 
-The prior snapshot was already pushed. Rotation of the affected Scrypted password is needed, and
-history cleanup requires explicit authorization and coordination with the NAS clone. Removing the
-old tree at HEAD does not purge prior commits. No history rewrite or credential rotation was done.
+The prior snapshot was already pushed. The authorized history rewrite has now removed it from the
+published branch and both known clones (Mac and NAS). Rotation of the affected Scrypted password
+remains needed. GitHub cached views, unknown clones, or backups are not covered by the local cleanup;
+see the [cleanup record](history-cleanup.md).
 
 ## Next steps
 

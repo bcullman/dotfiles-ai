@@ -73,7 +73,8 @@ shared, platform, role, or host-specific. Never infer that the newest version is
 
 Mac and NAS snapshots are available; work WSL and Pi captures remain pending. No live settings have
 been deployed. The repository has a GitHub remote. See the Mac–NAS comparison for the credential
-remediation discovered in the earlier Mac snapshot; rotation and history cleanup remain pending.
+remediation discovered in the earlier Mac snapshot. The published branch history and both known
+clones have been cleaned; credential rotation remains pending. See [cleanup record](docs/history-cleanup.md).
 
 ## Validation
 
