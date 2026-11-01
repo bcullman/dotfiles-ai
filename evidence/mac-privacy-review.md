@@ -8,8 +8,9 @@ Full reviewed digest: `a6dfc5b4ee7e23d6fbe338f2b02653c52aef382fde7dfe9b46a5246f0
 Correction: the earlier snapshot passed Gitleaks but retained a literal service password. The
 comparison review caught it, added an explicit replacement, and rebuilt this snapshot. A new
 independent literal-credential assignment check blocks that original snapshot. The prior version
-has been removed from the current tree, but still exists in pushed Git history. Credential rotation
-and coordinated history cleanup remain outstanding; no history rewrite has been performed.
+has now been removed from the published branch history and both known clones through an authorized
+rewrite. Credential rotation remains outstanding; cached server views and unknown copies are not
+covered by the clone cleanup. See the [cleanup record](../docs/history-cleanup.md).
 
 The snapshot preserves all 352 selected files as sanitized evidence, including application settings,
 syntax definitions, plugins, and completion data. It is not intended for installation. Raw captures,
