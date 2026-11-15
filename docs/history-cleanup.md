@@ -36,3 +36,29 @@ Private captures intentionally still contain original settings and remain exclud
 export workflow now rejects simple literal credential assignments independently of Gitleaks and has
 a regression test using a synthetic punctuation-heavy password. Neither check is a complete privacy
 or secret-detection guarantee.
+
+## Shell credential follow-up, 2026-11-15
+
+Moved `PAT_GIT_CLI`, `PAT_GIT_SEM_RELEASE`, `OPENAI_API_KEY`, `SCRYPTED_USERNAME`,
+and `SCRYPTED_PASSWORD` from the Mac's public shell exports into its ignored,
+mode-600 private exports file. A fresh shell loaded all five unchanged values.
+
+After fetching published branches and tags in `dotfiles-mac`, `dotfiles-ai`,
+`dotfiles`, and `docker-nas`, the four current token/password values were absent
+from all local Git objects. The Mac snapshot in this repository contained four
+placeholders and a literal Scrypted username. Removed all five assignments from
+its history and updated the corresponding manifest SHA-256 values. Unrelated
+uses of the same common username text were preserved. The snapshot directory
+identifier is retained as provenance; its file integrity hashes reflect cleanup.
+
+The rewrite changed only the intended snapshot and manifest blobs. Verification
+also found a local Codex checkpoint pointing directly to an older tree;
+git-filter-repo skipped that non-commit ref. Removed only the affected checkpoint,
+expired reflogs, and pruned unreachable objects. An all-object scan then found
+no assignment for any of the five variables. Future cleanups must inspect
+non-commit refs as well as branches and tags. The prior cleanup's `already_ran`
+marker also required explicitly selecting a new, independent filter run.
+
+The rewritten history supersedes the earlier commit IDs above. Other clones,
+including the previously documented NAS checkout, must be cleaned or recloned
+before use; this follow-up changed the Mac checkout and published history only.
